@@ -1,0 +1,252 @@
+/* =========================================
+   New Common Header Styles (2-Layer)
+   ========================================= */
+
+/* Header Container */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.site-header a {
+    text-decoration: none;
+}
+
+/* Layer 1: Top (Company Common) */
+.header-top {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 10px 0;
+}
+
+.header-top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.common-nav ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.common-nav a {
+    color: var(--color-text-main);
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.common-nav a:hover {
+    color: var(--color-primary);
+}
+
+.btn-contact-header {
+    padding: 8px 24px;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    background-color: var(--color-primary);
+    color: white !important;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(192, 57, 43, 0.2);
+}
+
+.btn-contact-header:hover {
+    background-color: #a93226;
+    transform: translateY(-2px);
+}
+
+/* Layer 2: Bottom (Business Specific) */
+.header-bottom {
+    background-color: #fff;
+    padding: 10px 0;
+    display: block;
+    /* Desktop only default */
+    font-size: 0.85rem;
+}
+
+.business-nav-row {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    gap: 20px;
+}
+
+.business-nav-row+.business-nav-row {
+    border-top: 1px dashed rgba(0, 0, 0, 0.05);
+}
+
+.row-label {
+    font-weight: bold;
+    white-space: nowrap;
+    min-width: 200px;
+    /* Ensure alignment */
+    padding: 4px 12px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Popi Styling */
+.popi-row .row-label {
+    background-color: #FFF3E0;
+    /* Light Orange */
+    color: #E67E22;
+}
+
+.popi-row .row-label::before {
+    content: '●';
+    color: #E67E22;
+    font-size: 0.8rem;
+}
+
+/* ME RIGHT Styling */
+.meright-row .row-label {
+    background-color: #E0F2F1;
+    /* Light Teal */
+    color: #009688;
+}
+
+.meright-row .row-label::before {
+    content: '■';
+    color: #009688;
+    font-size: 0.8rem;
+}
+
+.business-nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    /* Handle narrow screens */
+}
+
+.business-nav a {
+    color: #636e72;
+    transition: color 0.3s;
+}
+
+.business-nav a:hover {
+    color: var(--color-text-main);
+    text-decoration: underline;
+}
+
+/* Access (Map Pin Icon simulation if needed) */
+/* .business-nav a[href*="access"]::before { content: '📍'; margin-right: 4px; } */
+
+
+/* Mobile Menu (Hidden on Desktop) */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 10px;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--color-text-main);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 70px;
+    /* Below header top */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: #fff;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 999;
+}
+
+.mobile-menu-overlay.active {
+    transform: translateX(0);
+}
+
+.mobile-nav-group {
+    margin-bottom: 30px;
+}
+
+.mobile-nav-label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    color: var(--color-text-main);
+}
+
+.mobile-nav-list {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-nav-list li {
+    margin-bottom: 12px;
+}
+
+.mobile-nav-list a {
+    color: #555;
+    font-size: 1rem;
+    display: block;
+    padding: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+
+    .header-bottom,
+    .common-nav {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .header-top {
+        padding: 10px 20px;
+    }
+}
+
+/* Desktop Only / Mobile Only Utilities */
+.desktop-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .desktop-only {
+        display: none !important;
+    }
+
+    .mobile-only {
+        display: block !important;
+    }
+}

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://maps.googleapis.com https://maps.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://maps.gstatic.com https://*.googleapis.com https://*.google.com; frame-src https://www.google.com https://maps.google.com; connect-src 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="description" content="訪問看護リハビリステーションぽぴぃ。医療・介護保険対応。整形疾患、脳卒中、精神、難病、小児、看取りまで対応。">
+    <title>訪問看護リハビリステーション ぽぴぃ | 株式会社Terrasta.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        .page-header {
+            background-color: var(--color-popi-orange);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 5px solid var(--color-popi-orange);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .area-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .area-table th,
+        .area-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .area-table th {
+            background-color: #fcf3e6;
+            /* Softer orange background */
+            color: var(--color-popi-orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- New 2-Layer Header -->
+    <header class="site-header">
+        <!-- Layer 1: Top (Company Common) -->
+        <div class="header-top">
+            <div class="container header-top-inner">
+                <!-- Left: Logo -->
+                <a href="index.html" class="logo">
+                    <img src="picture/terrasta..png" alt="Terrasta." style="height: 90px; vertical-align: middle;">
+                </a>
+
+                <!-- Right: Common Nav (Desktop) -->
+                <nav class="common-nav desktop-only">
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">Terrasta.について</a></li>
+                        <li><a href="contact.html" class="btn btn-primary btn-contact-header">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Hamburger Button -->
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Layer 2: Bottom (Business Specific) -->
+        <div class="header-bottom desktop-only">
+            <div class="container">
+                <!-- Row 1: Popi -->
+                <div class="business-nav-row popi-row">
+                    <div class="row-label popi-label">訪問看護リハビリステーション ぽぴぃ</div>
+                    <nav class="business-nav">
+                        <ul>
+                            <li><a href="popi.html">私たちについて</a></li>
+                            <li><a href="popi.html">サービス</a></li>
+                            <li><a href="message.html">代表あいさつ</a></li>
+                            <li><a href="staff.html">スタッフ紹介</a></li>
+                            <li><a href="faq.html">よくある質問</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Row 2: ME RIGHT -->
+                <div class="business-nav-row meright-row">
+                    <div class="row-label meright-label">治療院 ME RIGHT</div>
+                    <nav class="business-nav">
+                        <ul>
+                            <li><a href="meright.html">ME RIGHTについて</a></li>
+                            <li><a href="rates.html">料金・プラン</a></li>
+                            <li><a href="meright.html#flow">ご利用の流れ</a></li>
+                            <li><a href="message.html">代表あいさつ</a></li>
+                            <li><a href="staff.html">スタッフ紹介</a></li>
+                            <li><a href="faq.html">よくある質問</a></li>
+                            <li><a href="meright.html#access">アクセス</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenu">
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label">Terrasta.</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">Terrasta.について</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label" style="color: #E67E22;">訪問看護リハビリステーション ぽぴぃ</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="popi.html">私たちについて</a></li>
+                    <li><a href="popi.html">サービス</a></li>
+                    <li><a href="message.html">代表あいさつ</a></li>
+                    <li><a href="staff.html">スタッフ紹介</a></li>
+                    <li><a href="faq.html">よくある質問</a></li>
+
+                </ul>
+            </div>
+
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label" style="color: #009688;">治療院 ME RIGHT</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="meright.html">ME RIGHTについて</a></li>
+                    <li><a href="rates.html">料金・プラン</a></li>
+                    <li><a href="meright.html#flow">ご利用の流れ</a></li>
+                    <li><a href="message.html">代表あいさつ</a></li>
+                    <li><a href="staff.html">スタッフ紹介</a></li>
+                    <li><a href="faq.html">よくある質問</a></li>
+                    <li><a href="meright.html#access">アクセス</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Title -->
+        <section class="page-header">
+            <div class="container">
+                <h1>訪問看護リハビリステーション ぽぴぃ</h1>
+                <p>医療・介護保険対応 / 地域連携・相談歓迎</p>
+            </div>
+        </section>
+
+        <!-- Intro -->
+        <section>
+            <div class="container" style="max-width: 800px;">
+                <h2 style="color: var(--color-secondary);">安心できる在宅療養を支えます</h2>
+                <p>
+                    医療機関やケアマネジャーの方々が「ここなら紹介できる」と信頼でき、<br>
+                    利用者様やご家族が「相談してよかった」と安心できるステーションを目指しています。
+                </p>
+                <div class="alert"
+                    style="background-color: #e1f7d5; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                    <strong>ご相談歓迎：</strong> 具体的な依頼が決まっていなくても構いません。「自宅で過ごせるか不安」「リハビリをもっとしたい」など、まずはお気軽にご相談ください。
+                </div>
+            </div>
+        </section>
+
+        <!-- Services & Areas -->
+        <section style="background-color: var(--color-bg-body);">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 40px;" class="font-english">Our Services & Areas</h2>
+                <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 40px; color: var(--color-text-main);">
+                    幅広い疾患・状態に対応可能。<br>
+                    「断らない」看護・リハビリを目指して。
+                </h3>
+
+                <div class="services-grid">
+                    <div class="card">
+                        <h3 style="color: var(--color-secondary); font-size: 1.4rem; margin-bottom: 20px;">質の高いサービス内容
+                        </h3>
+                        <ul style="line-height: 2;">
+                            <li><strong>訪問看護：</strong><br>健康状態の観察、カテーテル等の医療処置、服薬管理、清潔・入浴介助、ご家族への介護指導</li>
+                            <li><strong>訪問リハビリ：</strong><br>歩行・動作訓練、福祉用具の選定、家屋改修の助言、外出練習</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="color: var(--color-secondary); font-size: 1.4rem; margin-bottom: 20px;">対応領域一覧</h3>
+                        <p style="margin-bottom: 15px;">さいとう整形外科との連携による「術後フォロー」をはじめ、幅広い専門性を持ったスタッフが在籍しています。</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <span
+                                style="background: #e1f7d5; color: #2e7d32; padding: 8px 16px; border-radius: 20px; font-weight: bold;">整形疾患（術後等）</span>
+                            <span
+                                style="background: #e1f7d5; color: #2e7d32; padding: 8px 16px; border-radius: 20px; font-weight: bold;">脳卒中</span>
+                            <span
+                                style="background: #e1f7d5; color: #2e7d32; padding: 8px 16px; border-radius: 20px; font-weight: bold;">精神疾患</span>
+                            <span
+                                style="background: #e1f7d5; color: #2e7d32; padding: 8px 16px; border-radius: 20px; font-weight: bold;">難病</span>
+                            <span
+                                style="background: #e1f7d5; color: #2e7d32; padding: 8px 16px; border-radius: 20px; font-weight: bold;">小児</span>
+                            <span
+                                style="background: #e1f7d5; color: #2e7d32; padding: 8px 16px; border-radius: 20px; font-weight: bold;">終末期・看取り</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Split -->
+        <section>
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 40px;" class="font-english">Why Choose Popi?</h2>
+                <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 40px; color: var(--color-text-main);">
+                    ぽぴぃが選ばれる3つの理由</h3>
+
+                <!-- For Professionals -->
+                <div style="margin-bottom: 60px;">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                        <span
+                            style="background: var(--color-popi-orange); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">医療・ケアマネジャー様へ</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <h4 style="color: var(--color-secondary); font-size: 1.25rem; margin-bottom: 10px;">01.
+                                さいとう整形外科との連携</h4>
+                            <p>医師と密に情報共有し、術後や急性期後の在宅療養を医学的根拠に基づいてサポートします。</p>
+                        </li>
+                        <li class="feature-item">
+                            <h4 style="color: var(--color-secondary); font-size: 1.25rem; margin-bottom: 10px;">02.
+                                迅速なフットワーク</h4>
+                            <p>退院前カンファレンスへの参加や、急な状態変化時の対応など、地域医療の「手足」として動きます。</p>
+                        </li>
+                        <li class="feature-item">
+                            <h4 style="color: var(--color-secondary); font-size: 1.25rem; margin-bottom: 10px;">03.
+                                困難事例も相談可</h4>
+                            <p>精神疾患や独居、認知症など、複合的な課題を抱えるケースもまずはご相談ください。</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- For Users -->
+                <div>
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                        <span
+                            style="background: #27ae60; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">ご利用者様・ご家族へ</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <h4 style="color: #27ae60; font-size: 1.25rem; margin-bottom: 10px;">01. 「もっと良くなりたい」を応援</h4>
+                            <p>リハビリ専門職が在籍。ただ寝ているだけの療養ではなく、生活の質を上げるためのリハビリを提供します。</p>
+                        </li>
+                        <li class="feature-item">
+                            <h4 style="color: #27ae60; font-size: 1.25rem; margin-bottom: 10px;">02. 保険外（自費）も使える</h4>
+                            <p>介護保険の枠を超えてリハビリを増やしたい場合、併設のME RIGHTと連携して対応可能です。</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Area Map Visual -->
+        <section style="background-color: #ffffff; padding: 60px 0;">
+            <div class="container" style="max-width: 1000px;">
+                <h2 style="text-align: center; margin-bottom: 50px; font-weight: bold;">対応エリア</h2>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+                    <!-- Map Image -->
+                    <div style="text-align: center; position: relative; display: inline-block;">
+                        <img src="picture/popi_map_final.png" alt="対応エリアマップ"
+                            style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); position: relative; z-index: 1;">
+
+                        <!-- Color Overlay (Restored) -->
+                        <div style="
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 10px;
+                            background: radial-gradient(circle at 50% 50%, rgba(255, 160, 0, 0.7) 0%, rgba(255, 160, 0, 0.5) 65%, rgba(100, 100, 100, 0.5) 66%, rgba(100, 100, 100, 0.5) 100%);
+                            mix-blend-mode: multiply;
+                            z-index: 2;
+                            pointer-events: none;
+                        "></div>
+
+                        <p style="text-align: right; font-size: 0.7rem; color: #999; margin-top: 5px;">
+                            出典：<a
+                                href="http://www.mapfan.com/index.cgi?ZM=12&REF=ibm.hpb&SRCHKIND=SRCH_ADR&PARAM=%cc%f8%b0%e6%bb%d4"
+                                target="_blank" rel="noopener noreferrer"
+                                style="color: #999; text-decoration: none;">MapFan</a>
+                        </p>
+                    </div>
+
+                    <!-- Area Details -->
+                    <div style="font-family: 'Noto Sans JP', sans-serif;">
+                        <!-- Normal Area -->
+                        <div style="margin-bottom: 40px;">
+                            <h3 style="font-size: 1.1rem; color: #555; margin-bottom: 10px; font-weight: bold;">通常訪問エリア
+                            </h3>
+                            <div
+                                style="background-color: #FFEB3B; padding: 15px 20px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <p style="font-weight: bold; margin-bottom: 0; color: #333; font-size: 1.1rem;">
+                                    柳井市 / 田布施町<br>平生町 / 上関町
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Consultation Area -->
+                        <div style="margin-bottom: 40px;">
+                            <h3 style="font-size: 1.1rem; color: #555; margin-bottom: 10px; font-weight: bold;">相談可能エリア
+                            </h3>
+                            <div
+                                style="background-color: #EEEEEE; padding: 15px 20px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <p style="font-weight: bold; margin-bottom: 0; color: #555; font-size: 1.1rem;">
+                                    周防大島町 / 岩国市<br>光市 / 周南市
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Softened Consultation Message -->
+                        <div
+                            style="margin-top: 30px; text-align: center; border: 2px solid #ddd; padding: 20px; border-radius: 10px; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                            <p style="font-weight: bold; color: #555; margin-bottom: 5px; font-size: 1.1rem;">
+                                相談可能エリアも対応しております
+                            </p>
+                            <p style="font-size: 1.0rem; color: #888; margin-bottom: 0;">
+                                まずはお気軽にご相談ください
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Area / Time -->
+        <section style="background-color: #f9f9f9;">
+            <div class="container" style="max-width: 800px;">
+                <h2 style="text-align: center;">対応エリア・時間</h2>
+                <table class="area-table">
+                    <tr>
+                        <th>対応エリア</th>
+                        <td>柳井医療圏を中心としたエリア（詳細はお問い合わせください）</td>
+                    </tr>
+                    <tr>
+                        <th>営業時間</th>
+                        <td>月〜金 9:00〜18:00（土日祝・年末年始は要相談）</td>
+                    </tr>
+                    <tr>
+                        <th>緊急時対応</th>
+                        <td>24時間対応体制あり（契約が必要です）</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section style="background-color: var(--color-secondary); color: white; text-align: center;">
+            <div class="container">
+                <h2 style="color: white;">訪問看護について相談する</h2>
+                <p style="margin-bottom: 30px;">依頼の可否がわからなくても大丈夫です。<br>まずはお電話またはフォームよりご連絡ください。</p>
+                <a href="contact.html?type=popi" class="btn"
+                    style="background: white; color: var(--color-secondary); padding: 15px 40px; font-size: 1.2rem;">相談・お問い合わせフォームへ</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 株式会社Terrasta. All Rights Reserved.</p>
+            <div style="margin-top: 10px; font-size: 0.9rem;">
+                <a href="company.html" style="color: #b2bec3; text-decoration: none; margin: 0 10px;">会社概要</a>
+                <a href="privacy.html" style="color: #b2bec3; text-decoration: none; margin: 0 10px;">プライバシーポリシー</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

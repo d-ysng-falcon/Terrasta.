@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://maps.googleapis.com https://maps.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://maps.gstatic.com https://*.googleapis.com https://*.google.com; frame-src https://www.google.com https://maps.google.com; connect-src 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>利用規約 | 株式会社Terrasta.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- New 2-Layer Header -->
+    <header class="site-header">
+        <!-- Layer 1: Top (Company Common) -->
+        <div class="header-top">
+            <div class="container header-top-inner">
+                <!-- Left: Logo -->
+                <a href="index.html" class="logo">
+                    <img src="picture/terrasta..png" alt="Terrasta." style="height: 90px; vertical-align: middle;">
+                </a>
+
+                <!-- Right: Common Nav (Desktop) -->
+                <nav class="common-nav desktop-only">
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">Terrasta.について</a></li>
+                        <li><a href="contact.html" class="btn btn-primary btn-contact-header">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Hamburger Button -->
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Layer 2: Bottom (Business Specific) -->
+        <div class="header-bottom desktop-only">
+            <div class="container">
+                <!-- Row 1: Popi -->
+                <div class="business-nav-row popi-row">
+                    <div class="row-label popi-label">訪問看護リハビリステーション ぽぴぃ</div>
+                    <nav class="business-nav">
+                        <ul>
+                            <li><a href="popi.html">私たちについて</a></li>
+                            <li><a href="popi.html">サービス</a></li>
+                            <li><a href="message.html">代表あいさつ</a></li>
+                            <li><a href="staff.html">スタッフ紹介</a></li>
+                            <li><a href="faq.html">よくある質問</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Row 2: ME RIGHT -->
+                <div class="business-nav-row meright-row">
+                    <div class="row-label meright-label">治療院 ME RIGHT</div>
+                    <nav class="business-nav">
+                        <ul>
+                            <li><a href="meright.html">ME RIGHTについて</a></li>
+                            <li><a href="rates.html">料金・プラン</a></li>
+                            <li><a href="meright.html#flow">ご利用の流れ</a></li>
+                            <li><a href="message.html">代表あいさつ</a></li>
+                            <li><a href="staff.html">スタッフ紹介</a></li>
+                            <li><a href="faq.html">よくある質問</a></li>
+                            <li><a href="meright.html#access">アクセス</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenu">
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label">Terrasta.</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">Terrasta.について</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label" style="color: #E67E22;">訪問看護リハビリステーション ぽぴぃ</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="popi.html">私たちについて</a></li>
+                    <li><a href="popi.html">サービス</a></li>
+                    <li><a href="message.html">代表あいさつ</a></li>
+                    <li><a href="staff.html">スタッフ紹介</a></li>
+                    <li><a href="faq.html">よくある質問</a></li>
+
+                </ul>
+            </div>
+
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label" style="color: #009688;">治療院 ME RIGHT</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="meright.html">ME RIGHTについて</a></li>
+                    <li><a href="rates.html">料金・プラン</a></li>
+                    <li><a href="meright.html#flow">ご利用の流れ</a></li>
+                    <li><a href="message.html">代表あいさつ</a></li>
+                    <li><a href="staff.html">スタッフ紹介</a></li>
+                    <li><a href="faq.html">よくある質問</a></li>
+                    <li><a href="meright.html#access">アクセス</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="container" style="padding: 60px 20px;">
+        <h1 style="margin-bottom: 40px;">利用規約</h1>
+        <p>この利用規約（以下「本規約」）は、株式会社Terrasta.（以下「当社」）が提供する治療院ME RIGHTのサービス（以下「本サービス」）の利用条件を定めるものです。</p>
+
+        <h2>第1条（適用）</h2>
+        <p>本規約は、利用者と当社との間の本サービスの利用に関わる一切の関係に適用されるものとします。</p>
+
+        <h2>第2条（サービス内容）</h2>
+        <p>本サービスは、医療行為ではなく、コンディショニングや運動指導を行う自費サービスです。医師の治療を受けている場合は、必ず事前に主治医の許可を得てください。</p>
+
+        <h2>第3条（予約とキャンセル）</h2>
+        <p>本サービスは完全予約制です。キャンセルや変更は、原則として前日の営業時間内までにご連絡ください。</p>
+
+        <h2>第4条（免責事項）</h2>
+        <p>当社は、本サービスの利用による怪我や事故について、当社に故意または重過失がない限り、責任を負わないものとします。</p>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

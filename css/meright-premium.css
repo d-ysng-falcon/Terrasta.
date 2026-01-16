@@ -1,0 +1,224 @@
+/* ME RIGHT Premium Design Style */
+/* Base Settings */
+:root {
+    --mr-bg: #F9F8F6;
+    /* Premium Off-white */
+    --mr-text: #222222;
+    /* Near Black */
+    --mr-accent-gradient: linear-gradient(135deg, #00B4DB 0%, #0083B0 100%);
+    /* Cyan Blue Gradient */
+    --mr-font-serif: 'Cormorant Garamond', serif;
+    --mr-font-sans: 'Noto Sans JP', sans-serif;
+    --mr-easing: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+body.meright-body {
+    background-color: var(--mr-bg);
+    color: var(--mr-text);
+    font-family: var(--mr-font-sans);
+    padding-top: 0 !important;
+    /* Override sticky header padding constraint if needed */
+    overflow-x: hidden;
+}
+
+/* Typography */
+.mr-title {
+    font-family: var(--mr-font-serif);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.mr-text-serif {
+    font-family: var(--mr-font-serif);
+    font-style: italic;
+}
+
+/* Hero Section */
+.mr-hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.mr-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.1;
+    background: url('../picture/meright.png') no-repeat center center;
+    background-size: cover;
+    filter: grayscale(100%);
+    mix-blend-mode: multiply;
+    /* Fix for white background */
+}
+
+.mr-hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.mr-hero-title {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #2AF598 0%, #009EFD 100%);
+    /* Bright Green to Blue (Teal) */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    /* Removed text-stroke for clarity */
+    text-shadow: 0 10px 30px rgba(0, 158, 253, 0.15);
+    /* Matching shadow hue */
+}
+
+.mr-hero-subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+/* Sections */
+.mr-section {
+    padding: 120px 0;
+    position: relative;
+}
+
+.mr-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Philosophy */
+.mr-philosophy {
+    text-align: center;
+}
+
+.mr-philosophy-text {
+    font-size: 1.8rem;
+    line-height: 2;
+    font-feature-settings: "palt";
+}
+
+/* Gallery / Strengths */
+.mr-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.mr-gallery-item {
+    position: relative;
+}
+
+.mr-gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    mix-blend-mode: multiply;
+    /* Transparency fix */
+}
+
+.mr-gallery-text h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: var(--mr-font-serif);
+}
+
+/* Menu List */
+.mr-menu-list {
+    list-style: none;
+    margin-top: 60px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mr-menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+.mr-menu-item:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.mr-menu-name {
+    font-size: 1.4rem;
+    font-family: var(--mr-font-serif);
+}
+
+.mr-menu-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Staff */
+.mr-staff {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    background: white;
+    padding: 80px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.mr-staff-img {
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* CTA */
+.mr-cta-btn {
+    display: inline-block;
+    padding: 20px 60px;
+    border: 1px solid var(--mr-text);
+    color: var(--mr-text);
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    transition: all 0.3s var(--mr-easing);
+    background: transparent;
+}
+
+.mr-cta-btn:hover {
+    background: var(--mr-text);
+    color: white;
+}
+
+/* Lenis Recommended CSS */
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}

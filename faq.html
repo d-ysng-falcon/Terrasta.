@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://maps.googleapis.com https://maps.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://maps.gstatic.com https://*.googleapis.com https://*.google.com; frame-src https://www.google.com https://maps.google.com; connect-src 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>よくある質問 | 株式会社Terrasta.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            padding-top: 150px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- New 2-Layer Header -->
+    <header class="site-header">
+        <!-- Layer 1: Top (Company Common) -->
+        <div class="header-top">
+            <div class="container header-top-inner">
+                <!-- Left: Logo -->
+                <a href="index.html" class="logo">
+                    <img src="picture/terrasta..png" alt="Terrasta." style="height: 90px; vertical-align: middle;">
+                </a>
+
+                <!-- Right: Common Nav (Desktop) -->
+                <nav class="common-nav desktop-only">
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">Terrasta.について</a></li>
+                        <li><a href="contact.html" class="btn btn-primary btn-contact-header">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Hamburger Button -->
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Layer 2: Bottom (Business Specific) -->
+        <div class="header-bottom desktop-only">
+            <div class="container">
+                <!-- Row 1: Popi -->
+                <div class="business-nav-row popi-row">
+                    <div class="row-label popi-label">訪問看護リハビリステーション ぽぴぃ</div>
+                    <nav class="business-nav">
+                        <ul>
+                            <li><a href="popi.html">私たちについて</a></li>
+                            <li><a href="popi.html">サービス</a></li>
+                            <li><a href="message.html">代表あいさつ</a></li>
+                            <li><a href="staff.html">スタッフ紹介</a></li>
+                            <li><a href="faq.html">よくある質問</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Row 2: ME RIGHT -->
+                <div class="business-nav-row meright-row">
+                    <div class="row-label meright-label">治療院 ME RIGHT</div>
+                    <nav class="business-nav">
+                        <ul>
+                            <li><a href="meright.html">ME RIGHTについて</a></li>
+                            <li><a href="rates.html">料金・プラン</a></li>
+                            <li><a href="meright.html#flow">ご利用の流れ</a></li>
+                            <li><a href="message.html">代表あいさつ</a></li>
+                            <li><a href="staff.html">スタッフ紹介</a></li>
+                            <li><a href="faq.html">よくある質問</a></li>
+                            <li><a href="meright.html#access">アクセス</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenu">
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label">Terrasta.</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">Terrasta.について</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label" style="color: #E67E22;">訪問看護リハビリステーション ぽぴぃ</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="popi.html">私たちについて</a></li>
+                    <li><a href="popi.html">サービス</a></li>
+                    <li><a href="message.html">代表あいさつ</a></li>
+                    <li><a href="staff.html">スタッフ紹介</a></li>
+                    <li><a href="faq.html">よくある質問</a></li>
+
+                </ul>
+            </div>
+
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label" style="color: #009688;">治療院 ME RIGHT</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="meright.html">ME RIGHTについて</a></li>
+                    <li><a href="rates.html">料金・プラン</a></li>
+                    <li><a href="meright.html#flow">ご利用の流れ</a></li>
+                    <li><a href="message.html">代表あいさつ</a></li>
+                    <li><a href="staff.html">スタッフ紹介</a></li>
+                    <li><a href="faq.html">よくある質問</a></li>
+                    <li><a href="meright.html#access">アクセス</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="container" style="padding-top: 150px; padding-bottom: 100px;">
+        <div style="text-align: center; margin-bottom: 80px;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 20px;">よくある質問</h1>
+            <p style="font-size: 1.2rem; color: #666;">Q&A</p>
+        </div>
+
+        <style>
+            .faq-item {
+                border-bottom: 1px solid #eee;
+                margin-bottom: 10px;
+            }
+
+            .faq-question {
+                width: 100%;
+                text-align: left;
+                padding: 20px;
+                background: #fff;
+                border: none;
+                cursor: pointer;
+                font-size: 1.1rem;
+                font-weight: bold;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                transition: background 0.3s;
+            }
+
+            .faq-question:hover {
+                background: #fdfdfd;
+            }
+
+            .faq-question::after {
+                content: '+';
+                font-size: 1.5rem;
+                color: var(--color-primary);
+                transition: transform 0.3s;
+            }
+
+            .faq-question.active::after {
+                transform: rotate(45deg);
+            }
+
+            .faq-answer {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+                background: #fafafa;
+                padding: 0 20px;
+            }
+
+            .faq-answer p {
+                padding: 20px 0;
+                color: #444;
+                line-height: 1.8;
+            }
+
+            .faq-section {
+                max-width: 800px;
+                margin: 0 auto 80px auto;
+                background: #fff;
+                border-radius: 8px;
+                padding: 30px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+            }
+        </style>
+
+        <!-- Popi FAQ -->
+        <h2 style="text-align: center; margin-bottom: 30px; color: var(--color-popi-orange);">訪問看護リハビリステーション ぽぴぃ</h2>
+        <div class="faq-section">
+            <div class="faq-item">
+                <button class="faq-question">Q. どのような人が利用できますか？</button>
+                <div class="faq-answer">
+                    <p>
+                        A. 病気や障害をお持ちで、かかりつけ医が訪問看護・リハビリが必要と認めた方がご利用いただけます。<br>
+                        年齢に関わらず、赤ちゃんからお年寄りまで、介護保険・医療保険のどちらでも対応可能です。
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Q. 週に何回くらい来てもらえますか？</button>
+                <div class="faq-answer">
+                    <p>
+                        A. 介護保険の場合はケアプランに基づき決定します（平均週1〜3回程度）。<br>
+                        医療保険の場合は原則週3回までですが、病状により毎日訪問することも可能です。詳しくはご相談ください。
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Q. 交通費はかかりますか？</button>
+                <div class="faq-answer">
+                    <p>
+                        A. 指定の訪問エリア内（柳井市、平生町、田布施町、周防大島町の一部、光市の一部）であれば交通費は無料です。<br>
+                        エリア外の場合は実費をいただく場合がございます。
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Q. 夜間や休日の対応は？</button>
+                <div class="faq-answer">
+                    <p>
+                        A. 24時間連絡体制をとっておりますので、緊急時や夜間・休日でも電話相談や緊急訪問が可能です（別途契約が必要です）。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ME RIGHT FAQ -->
+        <h2 style="text-align: center; margin-bottom: 30px; color: #0083B0;">治療院 ME RIGHT</h2>
+        <div class="faq-section">
+            <div class="faq-item">
+                <button class="faq-question">Q. 保険は使えますか？</button>
+                <div class="faq-answer">
+                    <p>
+                        A. 申し訳ございませんが、当院は「完全自費診療」のため、健康保険や介護保険はご利用いただけません。<br>
+                        その分、制度の枠（日数や施術内容の制限）にとらわれない、一人ひとりに合わせた十分な質の高い施術を提供しております。
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Q. どのような服装で行けばいいですか？</button>
+                <div class="faq-answer">
+                    <p>
+                        A. 動きやすい服装でお越しください。ジャージやTシャツなどがおすすめです。<br>
+                        お着替えをお持ちいただき、当院で着替えていただくことも可能です。
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Q. 支払い方法は？</button>
+                <div class="faq-answer">
+                    <p>
+                        A. 現金、クレジットカード、各種電子マネー、QRコード決済（PayPayなど）がご利用いただけます。
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Q. 予約は必要ですか？</button>
+                <div class="faq-answer">
+                    <p>
+                        A. はい、完全予約制となっております。<br>
+                        事前にお電話、LINE、またはお問い合わせフォームよりご予約をお願いいたします。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Simple FAQ Accordion Script
+            document.querySelectorAll('.faq-question').forEach(button => {
+                button.addEventListener('click', () => {
+                    button.classList.toggle('active');
+                    const answer = button.nextElementSibling;
+                    if (button.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    } else {
+                        answer.style.maxHeight = 0;
+                    }
+                });
+            });
+        </script>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

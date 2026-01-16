@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://maps.googleapis.com https://maps.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://maps.gstatic.com https://*.googleapis.com https://*.google.com; frame-src https://www.google.com https://maps.google.com; connect-src 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>代表あいさつ | 株式会社Terrasta.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            padding-top: 150px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- New 2-Layer Header -->
+    <header class="site-header">
+        <!-- Layer 1: Top (Company Common) -->
+        <div class="header-top">
+            <div class="container header-top-inner">
+                <!-- Left: Logo -->
+                <a href="index.html" class="logo">
+                    <img src="picture/terrasta..png" alt="Terrasta." style="height: 90px; vertical-align: middle;">
+                </a>
+
+                <!-- Right: Common Nav (Desktop) -->
+                <nav class="common-nav desktop-only">
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">Terrasta.について</a></li>
+                        <li><a href="contact.html" class="btn btn-primary btn-contact-header">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Hamburger Button -->
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Layer 2: Bottom (Business Specific) -->
+        <div class="header-bottom desktop-only">
+            <div class="container">
+                <!-- Row 1: Popi -->
+                <div class="business-nav-row popi-row">
+                    <div class="row-label popi-label">訪問看護リハビリステーション ぽぴぃ</div>
+                    <nav class="business-nav">
+                        <ul>
+                            <li><a href="popi.html">私たちについて</a></li>
+                            <li><a href="popi.html">サービス</a></li>
+                            <li><a href="message.html">代表あいさつ</a></li>
+                            <li><a href="staff.html">スタッフ紹介</a></li>
+                            <li><a href="faq.html">よくある質問</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Row 2: ME RIGHT -->
+                <div class="business-nav-row meright-row">
+                    <div class="row-label meright-label">治療院 ME RIGHT</div>
+                    <nav class="business-nav">
+                        <ul>
+                            <li><a href="meright.html">ME RIGHTについて</a></li>
+                            <li><a href="rates.html">料金・プラン</a></li>
+                            <li><a href="meright.html#flow">ご利用の流れ</a></li>
+                            <li><a href="message.html">代表あいさつ</a></li>
+                            <li><a href="staff.html">スタッフ紹介</a></li>
+                            <li><a href="faq.html">よくある質問</a></li>
+                            <li><a href="meright.html#access">アクセス</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenu">
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label">Terrasta.</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">Terrasta.について</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label" style="color: #E67E22;">訪問看護リハビリステーション ぽぴぃ</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="popi.html">私たちについて</a></li>
+                    <li><a href="popi.html">サービス</a></li>
+                    <li><a href="message.html">代表あいさつ</a></li>
+                    <li><a href="staff.html">スタッフ紹介</a></li>
+                    <li><a href="faq.html">よくある質問</a></li>
+
+                </ul>
+            </div>
+
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label" style="color: #009688;">治療院 ME RIGHT</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="meright.html">ME RIGHTについて</a></li>
+                    <li><a href="rates.html">料金・プラン</a></li>
+                    <li><a href="meright.html#flow">ご利用の流れ</a></li>
+                    <li><a href="message.html">代表あいさつ</a></li>
+                    <li><a href="staff.html">スタッフ紹介</a></li>
+                    <li><a href="faq.html">よくある質問</a></li>
+                    <li><a href="meright.html#access">アクセス</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="container" style="padding-top: 150px; padding-bottom: 100px;">
+        <div style="text-align: center; margin-bottom: 80px;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 20px;">代表あいさつ</h1>
+            <p style="font-size: 1.2rem; color: #666;">Message</p>
+        </div>
+
+        <section
+            style="display: flex; flex-wrap: wrap; justify-content: center; gap: 60px; max-width: 1000px; margin: 0 auto;">
+            <div style="flex: 1; min-width: 300px; max-width: 400px;">
+                <div
+                    style="width: 100%; height: 500px; background-color: #f0f0f0; display: flex; align-items: center; justify-content: center; border-radius: 8px; overflow: hidden;">
+                    <!-- Placeholder for CEO Image -->
+                    <img src="picture/uploaded_image_1768495055597.png" alt="代表取締役 田嶌 圭佑"
+                        style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+                </div>
+            </div>
+
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="font-size: 1.8rem; margin-bottom: 30px; line-height: 1.6;">
+                    「地域に、安心できる<br>
+                    『受け皿』をつくりたい」
+                </h2>
+
+                <div class="message-body" style="line-height: 2; margin-bottom: 40px; color: #444;">
+                    <p>
+                        はじめまして。株式会社Terrasta.代表の田嶌圭佑です。<br>
+                        私はこれまで、理学療法士として病院や訪問リハビリの現場で働いてきました。
+                    </p>
+                    <p>
+                        その中で、退院後のリハビリが不十分で動けなくなってしまう方や、介護保険の枠だけでは十分な支援が受けられない方を数多く見てきました。<br>
+                        「もっと良くなりたいのに、制度の壁で諦めざるを得ない」<br>
+                        そんな現状を目の当たりにし、自分たちにできることはないかと自問し続けました。
+                    </p>
+                    <p>
+                        Terrasta.（テラスタ）という社名には、<br>
+                        「地域（Terra）を照らす（Star/Start）」という意味を込めています。<br>
+                        医療や介護の隙間を埋め、誰もが安心して暮らせる社会の「受け皿」になりたい。<br>
+                        そんな想いで、訪問看護事業と自費リハビリ事業を立ち上げました。
+                    </p>
+                    <p>
+                        利用者様一人ひとりの「これがしたい」「こうなりたい」に寄り添い、<br>
+                        地域の皆様に信頼されるパートナーであり続けられるよう、<br>
+                        スタッフ一同、真摯に向き合ってまいります。
+                    </p>
+                </div>
+
+                <div style="text-align: right;">
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 5px;">株式会社Terrasta. 代表取締役</p>
+                    <p style="font-size: 1.5rem; font-weight: bold; font-family: 'Noto Serif JP', serif;">田嶌 圭佑</p>
+                    <p style="font-size: 0.8rem; color: #999;">理学療法士 / 認定理学療法士（脳卒中）</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

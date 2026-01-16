@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://maps.googleapis.com https://maps.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://maps.gstatic.com https://*.googleapis.com https://*.google.com; frame-src https://www.google.com https://maps.google.com; connect-src 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>スタッフ紹介 | 株式会社Terrasta.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            padding-top: 150px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- New 2-Layer Header -->
+    <header class="site-header">
+        <!-- Layer 1: Top (Company Common) -->
+        <div class="header-top">
+            <div class="container header-top-inner">
+                <!-- Left: Logo -->
+                <a href="index.html" class="logo">
+                    <img src="picture/terrasta..png" alt="Terrasta." style="height: 90px; vertical-align: middle;">
+                </a>
+
+                <!-- Right: Common Nav (Desktop) -->
+                <nav class="common-nav desktop-only">
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">Terrasta.について</a></li>
+                        <li><a href="contact.html" class="btn btn-primary btn-contact-header">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Hamburger Button -->
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Layer 2: Bottom (Business Specific) -->
+        <div class="header-bottom desktop-only">
+            <div class="container">
+                <!-- Row 1: Popi -->
+                <div class="business-nav-row popi-row">
+                    <div class="row-label popi-label">訪問看護リハビリステーション ぽぴぃ</div>
+                    <nav class="business-nav">
+                        <ul>
+                            <li><a href="popi.html">私たちについて</a></li>
+                            <li><a href="popi.html">サービス</a></li>
+                            <li><a href="message.html">代表あいさつ</a></li>
+                            <li><a href="staff.html">スタッフ紹介</a></li>
+                            <li><a href="faq.html">よくある質問</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Row 2: ME RIGHT -->
+                <div class="business-nav-row meright-row">
+                    <div class="row-label meright-label">治療院 ME RIGHT</div>
+                    <nav class="business-nav">
+                        <ul>
+                            <li><a href="meright.html">ME RIGHTについて</a></li>
+                            <li><a href="rates.html">料金・プラン</a></li>
+                            <li><a href="meright.html#flow">ご利用の流れ</a></li>
+                            <li><a href="message.html">代表あいさつ</a></li>
+                            <li><a href="staff.html">スタッフ紹介</a></li>
+                            <li><a href="faq.html">よくある質問</a></li>
+                            <li><a href="meright.html#access">アクセス</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenu">
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label">Terrasta.</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">Terrasta.について</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label" style="color: #E67E22;">訪問看護リハビリステーション ぽぴぃ</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="popi.html">私たちについて</a></li>
+                    <li><a href="popi.html">サービス</a></li>
+                    <li><a href="message.html">代表あいさつ</a></li>
+                    <li><a href="staff.html">スタッフ紹介</a></li>
+                    <li><a href="faq.html">よくある質問</a></li>
+
+                </ul>
+            </div>
+
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label" style="color: #009688;">治療院 ME RIGHT</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="meright.html">ME RIGHTについて</a></li>
+                    <li><a href="rates.html">料金・プラン</a></li>
+                    <li><a href="meright.html#flow">ご利用の流れ</a></li>
+                    <li><a href="message.html">代表あいさつ</a></li>
+                    <li><a href="staff.html">スタッフ紹介</a></li>
+                    <li><a href="faq.html">よくある質問</a></li>
+                    <li><a href="meright.html#access">アクセス</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="container" style="padding-top: 150px; padding-bottom: 100px;">
+        <div style="text-align: center; margin-bottom: 80px;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 20px;">スタッフ紹介</h1>
+            <p style="font-size: 1.2rem; color: #666;">Staff</p>
+            <p style="margin-top: 20px; color: #444;">国家資格を持った専門スタッフが、<br>あなたの生活をサポートします。</p>
+        </div>
+
+        <!-- Popi Staff -->
+        <section style="margin-bottom: 100px;">
+            <div style="border-left: 5px solid var(--color-popi-orange); padding-left: 15px; margin-bottom: 40px;">
+                <h2 style="font-size: 1.8rem; margin: 0; color: #333;">訪問看護リハビリステーション ぽぴぃ</h2>
+                <p style="color: var(--color-popi-orange); font-weight: bold;">Nursing & Rehabilitation</p>
+            </div>
+
+            <div class="staff-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px;">
+                <!-- Staff 1 -->
+                <div class="staff-card"
+                    style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <div
+                        style="height: 250px; background: #fafafa; display: flex; align-items: center; justify-content: center;">
+                        <!-- Placeholder Image -->
+                        <span style="color: #ccc; font-size: 3rem;">☺</span>
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 5px;">看護師スタッフ</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 15px;">Nurse</p>
+                        <p style="color: #444; font-size: 0.95rem; line-height: 1.6;">
+                            利用者様の「家で過ごしたい」という想いに寄り添い、安心をお届けします。笑顔での訪問を心がけています。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Staff 2 -->
+                <div class="staff-card"
+                    style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <div
+                        style="height: 250px; background: #fafafa; display: flex; align-items: center; justify-content: center;">
+                        <!-- Placeholder Image -->
+                        <span style="color: #ccc; font-size: 3rem;">☺</span>
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 5px;">理学療法士スタッフ</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 15px;">Physical Therapist</p>
+                        <p style="color: #444; font-size: 0.95rem; line-height: 1.6;">
+                            身体機能の改善だけでなく、生活の中での「楽しみ」を見つけるお手伝いをさせていただきます。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Staff 3 -->
+                <div class="staff-card"
+                    style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <div
+                        style="height: 250px; background: #fafafa; display: flex; align-items: center; justify-content: center;">
+                        <!-- Placeholder Image -->
+                        <span style="color: #ccc; font-size: 3rem;">☺</span>
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 5px;">作業療法士スタッフ</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 15px;">Occupational Therapist</p>
+                        <p style="color: #444; font-size: 0.95rem; line-height: 1.6;">
+                            自分らしい生活を取り戻すために、日常動作の工夫や環境調整などを一緒に考えていきます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ME RIGHT Staff -->
+        <section>
+            <div style="border-left: 5px solid #0083B0; padding-left: 15px; margin-bottom: 40px;">
+                <h2 style="font-size: 1.8rem; margin: 0; color: #333;">治療院 ME RIGHT</h2>
+                <p style="color: #0083B0; font-weight: bold;">Treatment & Conditioning</p>
+            </div>
+
+            <div class="staff-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px;">
+                <!-- Staff 1 -->
+                <div class="staff-card"
+                    style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <div
+                        style="height: 250px; background: #fafafa; display: flex; align-items: center; justify-content: center;">
+                        <img src="picture/uploaded_image_1768495055597.png" alt="田嶌 圭佑"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 5px;">田嶌 圭佑</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 15px;">代表 / 認定理学療法士（脳卒中）</p>
+                        <ul style="font-size: 0.85rem; color: #666; padding-left: 20px; margin-bottom: 15px;">
+                            <li>認定理学療法士（脳卒中）</li>
+                            <li>LSVT BIG 認定療法士</li>
+                            <li>福祉住環境コーディネーター2級</li>
+                        </ul>
+                        <p style="color: #444; font-size: 0.95rem; line-height: 1.6;">
+                            脳卒中リハビリと徒手療法を専門としています。諦めていた動きを取り戻すための、ベストな施術を提供します。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Staff 2 -->
+                <div class="staff-card"
+                    style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <div
+                        style="height: 250px; background: #fafafa; display: flex; align-items: center; justify-content: center;">
+                        <!-- Placeholder Image -->
+                        <span style="color: #ccc; font-size: 3rem;">☺</span>
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 5px;">安永 大輝</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 15px;">取締役 / 理学療法士</p>
+                        <ul style="font-size: 0.85rem; color: #666; padding-left: 20px; margin-bottom: 15px;">
+                            <li>理学療法士</li>
+                            <li>他資格等</li>
+                        </ul>
+                        <p style="color: #444; font-size: 0.95rem; line-height: 1.6;">
+                            痛みの根本原因を探り、再発しない身体づくりをサポートします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

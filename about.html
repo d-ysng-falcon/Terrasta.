@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://maps.googleapis.com https://maps.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://maps.gstatic.com https://*.googleapis.com https://*.google.com; frame-src https://www.google.com https://maps.google.com; connect-src 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Terrasta.について | 株式会社Terrasta.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:wght@600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 2;
+            color: #444;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--color-text-main);
+            border-bottom: 2px solid var(--color-primary-light);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .philosophy-text {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- New 2-Layer Header -->
+    <header class="site-header">
+        <!-- Layer 1: Top (Company Common) -->
+        <div class="header-top">
+            <div class="container header-top-inner">
+                <!-- Left: Logo -->
+                <a href="index.html" class="logo">
+                    <img src="picture/terrasta..png" alt="Terrasta." style="height: 90px; vertical-align: middle;">
+                </a>
+
+                <!-- Right: Common Nav (Desktop) -->
+                <nav class="common-nav desktop-only">
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">Terrasta.について</a></li>
+                        <li><a href="contact.html" class="btn btn-primary btn-contact-header">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Hamburger Button -->
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Layer 2: Bottom (Business Specific) -->
+        <div class="header-bottom desktop-only">
+            <div class="container">
+                <!-- Row 1: Popi -->
+                <div class="business-nav-row popi-row">
+                    <div class="row-label popi-label">訪問看護リハビリステーション ぽぴぃ</div>
+                    <nav class="business-nav">
+                        <ul>
+                            <li><a href="popi.html">私たちについて</a></li>
+                            <li><a href="popi.html">サービス</a></li>
+                            <li><a href="message.html">代表あいさつ</a></li>
+                            <li><a href="staff.html">スタッフ紹介</a></li>
+                            <li><a href="faq.html">よくある質問</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Row 2: ME RIGHT -->
+                <div class="business-nav-row meright-row">
+                    <div class="row-label meright-label">治療院 ME RIGHT</div>
+                    <nav class="business-nav">
+                        <ul>
+                            <li><a href="meright.html">ME RIGHTについて</a></li>
+                            <li><a href="rates.html">料金・プラン</a></li>
+                            <li><a href="meright.html#flow">ご利用の流れ</a></li>
+                            <li><a href="message.html">代表あいさつ</a></li>
+                            <li><a href="staff.html">スタッフ紹介</a></li>
+                            <li><a href="faq.html">よくある質問</a></li>
+                            <li><a href="meright.html#access">アクセス</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenu">
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label">Terrasta.</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">Terrasta.について</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label" style="color: #E67E22;">訪問看護リハビリステーション ぽぴぃ</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="popi.html">私たちについて</a></li>
+                    <li><a href="popi.html">サービス</a></li>
+                    <li><a href="message.html">代表あいさつ</a></li>
+                    <li><a href="staff.html">スタッフ紹介</a></li>
+                    <li><a href="faq.html">よくある質問</a></li>
+
+                </ul>
+            </div>
+
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label" style="color: #009688;">治療院 ME RIGHT</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="meright.html">ME RIGHTについて</a></li>
+                    <li><a href="rates.html">料金・プラン</a></li>
+                    <li><a href="meright.html#flow">ご利用の流れ</a></li>
+                    <li><a href="message.html">代表あいさつ</a></li>
+                    <li><a href="staff.html">スタッフ紹介</a></li>
+                    <li><a href="faq.html">よくある質問</a></li>
+                    <li><a href="meright.html#access">アクセス</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 150px; padding-bottom: 100px;">
+        <!-- Page Title -->
+        <div style="text-align: center; margin-bottom: 80px;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 20px;">Terrasta.について</h1>
+            <p style="font-size: 1.5rem; font-weight: bold; color: var(--color-primary);">地域に、安心できる「受け皿」をつくるために。</p>
+        </div>
+
+        <!-- Section 1: Philosophy -->
+        <section style="margin-bottom: 100px; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <h2 class="section-title">Terrasta.の考え方</h2>
+            <div class="philosophy-text">
+                <p>Terrasta.は、<br>
+                    医療や介護、制度の枠だけでは支えきれない方が行き場を失わないための「受け皿」をつくることを目的とした会社です。</p>
+
+                <p>病院のリハビリが終わったあと、<br>
+                    介護保険の対象にならないとき、<br>
+                    それでも「良くなりたい」「動きたい」と願う人がいる。</p>
+
+                <p>私たちは、そうした想いが途切れないよう、<br>
+                    地域の中で医療と生活をつなぐ役割を担います。</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Business -->
+        <section style="max-width: 800px; margin-left: auto; margin-right: auto;">
+            <h2 class="section-title">Terrasta.の事業</h2>
+            <div class="philosophy-text">
+                <p style="margin-bottom: 40px;">Terrasta.では、地域のニーズに応じて、以下の事業を展開しています。</p>
+
+                <div style="margin-bottom: 60px;">
+                    <h3
+                        style="font-size: 1.4rem; margin-bottom: 15px; color: var(--color-popi-orange); display: flex; align-items: center; gap: 10px;">
+                        <span
+                            style="width: 10px; height: 10px; background: var(--color-popi-orange); border-radius: 50%; display: inline-block;"></span>
+                        訪問看護リハビリステーション ぽぴぃ
+                    </h3>
+                    <p>医療・介護保険に対応し、在宅での療養・生活を支える訪問看護リハビリ事業です。</p>
+                    <p>医師・ケアマネジャー・ご家族と連携しながら、「安心して自宅で暮らし続ける」ための支援を行っています。</p>
+                    <div style="margin-top: 20px;">
+                        <a href="popi.html"
+                            style="color: var(--color-popi-orange); text-decoration: underline;">ぽぴぃの詳細を見る &rarr;</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3
+                        style="font-size: 1.4rem; margin-bottom: 15px; color: #0083B0; display: flex; align-items: center; gap: 10px;">
+                        <span
+                            style="width: 10px; height: 10px; background: #0083B0; border-radius: 50%; display: inline-block;"></span>
+                        治療院 ME RIGHT
+                    </h3>
+                    <p>自費リハビリ・運動療法専門の治療院です。</p>
+                    <p>機能解剖に基づく徒手療法と運動療法で、痛みと動きの本質に向き合います。<br>
+                        保険外ならではの、時間と質の制限を受けないマンツーマンのサポートを提供しています。</p>
+                    <div style="margin-top: 20px;">
+                        <a href="meright.html" style="color: #0083B0; text-decoration: underline;">ME RIGHTの詳細を見る
+                            &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 3: Values -->
+        <section style="max-width: 800px; margin-left: auto; margin-right: auto; margin-top: 100px;">
+            <h2 class="section-title">Terrasta.が大切にしていること</h2>
+            <div class="philosophy-text">
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 15px;">
+                        <span style="color: var(--color-primary); font-size: 1.2rem;">✔</span>
+                        <span>制度の枠にとらわれず、必要な人に必要な支援を届けること</span>
+                    </li>
+                    <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 15px;">
+                        <span style="color: var(--color-primary); font-size: 1.2rem;">✔</span>
+                        <span>地域の医療・介護と対立せず、連携すること</span>
+                    </li>
+                    <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 15px;">
+                        <span style="color: var(--color-primary); font-size: 1.2rem;">✔</span>
+                        <span>良くなったら、無理に通わせないこと</span>
+                    </li>
+                </ul>
+                <p style="margin-top: 40px; font-weight: bold; font-size: 1.2rem; text-align: center;">
+                    Terrasta.は、<br>
+                    「通わせるための仕組み」ではなく、<br>
+                    「支えるための仕組み」をつくります。
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 4: Company Information -->
+        <section style="max-width: 800px; margin-left: auto; margin-right: auto; margin-top: 100px;">
+            <h2 class="section-title">会社情報</h2>
+            <div class="philosophy-text">
+                <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <th style="text-align: left; padding: 15px 0; width: 30%; color: var(--color-primary);">会社名</th>
+                        <td style="padding: 15px 0;">Terrasta.</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <th
+                            style="padding: 15px 0; color: var(--color-primary); vertical-align: top; text-align: left;">
+                            事業内容</th>
+                        <td style="padding: 15px 0;">
+                            ・訪問看護リハビリステーションの運営<br>
+                            ・自費リハビリ・運動療法事業の運営
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; padding: 15px 0; color: var(--color-primary);">所在地</th>
+                        <td style="padding: 15px 0;">山口県柳井市南町7丁目8-12</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 株式会社Terrasta. All Rights Reserved.</p>
+            <div style="margin-top: 10px; font-size: 0.9rem;">
+                <a href="company.html" style="color: #b2bec3; text-decoration: none; margin: 0 10px;">会社概要</a>
+                <a href="legal.html" style="color: #b2bec3; text-decoration: none; margin: 0 10px;">特定商取引法に基づく表記</a>
+                <a href="terms.html" style="color: #b2bec3; text-decoration: none; margin: 0 10px;">利用規約</a>
+                <a href="privacy.html" style="color: #b2bec3; text-decoration: none; margin: 0 10px;">プライバシーポリシー</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

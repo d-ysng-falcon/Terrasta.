@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja" class="meright-body">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://maps.googleapis.com https://maps.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://maps.gstatic.com https://*.googleapis.com https://*.google.com; frame-src https://www.google.com https://maps.google.com; connect-src 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="description" content="治療院ME RIGHT。痛み・不調の根本解決とパフォーマンスアップへ。機能解剖学に基づく徒手療法と運動療法。">
+    <title>ME RIGHT Therapy | Premium Private Care</title>
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Premium Styles -->
+    <link rel="stylesheet" href="css/meright-premium.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+JP:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- Lenis for Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script>
+</head>
+
+<body class="meright-body">
+
+    <!-- Header (Sticky from Global) -->
+    <!-- New 2-Layer Header -->
+    <header class="site-header">
+        <!-- Layer 1: Top (Company Common) -->
+        <div class="header-top">
+            <div class="container header-top-inner">
+                <!-- Left: Logo -->
+                <a href="index.html" class="logo">
+                    <img src="picture/terrasta..png" alt="Terrasta." style="height: 90px; vertical-align: middle;">
+                </a>
+
+                <!-- Right: Common Nav (Desktop) -->
+                <nav class="common-nav desktop-only">
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">Terrasta.について</a></li>
+                        <li><a href="contact.html" class="btn btn-primary btn-contact-header">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Hamburger Button -->
+                <button class="mobile-menu-btn" aria-label="Menu" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Layer 2: Bottom (Business Specific) -->
+        <div class="header-bottom desktop-only">
+            <div class="container">
+                <!-- Row 1: Popi -->
+                <div class="business-nav-row popi-row">
+                    <div class="row-label popi-label">訪問看護リハビリステーション ぽぴぃ</div>
+                    <nav class="business-nav">
+                        <ul>
+                            <li><a href="popi.html">私たちについて</a></li>
+                            <li><a href="popi.html">サービス</a></li>
+                            <li><a href="message.html">代表あいさつ</a></li>
+                            <li><a href="staff.html">スタッフ紹介</a></li>
+                            <li><a href="faq.html">よくある質問</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Row 2: ME RIGHT -->
+                <div class="business-nav-row meright-row">
+                    <div class="row-label meright-label">治療院 ME RIGHT</div>
+                    <nav class="business-nav">
+                        <ul>
+                            <li><a href="meright.html">ME RIGHTについて</a></li>
+                            <li><a href="rates.html">料金・プラン</a></li>
+                            <li><a href="meright.html#flow">ご利用の流れ</a></li>
+                            <li><a href="message.html">代表あいさつ</a></li>
+                            <li><a href="staff.html">スタッフ紹介</a></li>
+                            <li><a href="faq.html">よくある質問</a></li>
+                            <li><a href="meright.html#access">アクセス</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenu">
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label">Terrasta.</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">Terrasta.について</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label" style="color: #E67E22;">訪問看護リハビリステーション ぽぴぃ</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="popi.html">私たちについて</a></li>
+                    <li><a href="popi.html">サービス</a></li>
+                    <li><a href="message.html">代表あいさつ</a></li>
+                    <li><a href="staff.html">スタッフ紹介</a></li>
+                    <li><a href="faq.html">よくある質問</a></li>
+
+                </ul>
+            </div>
+
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label" style="color: #009688;">治療院 ME RIGHT</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="meright.html">ME RIGHTについて</a></li>
+                    <li><a href="rates.html">料金・プラン</a></li>
+                    <li><a href="meright.html#flow">ご利用の流れ</a></li>
+                    <li><a href="message.html">代表あいさつ</a></li>
+                    <li><a href="staff.html">スタッフ紹介</a></li>
+                    <li><a href="faq.html">よくある質問</a></li>
+                    <li><a href="meright.html#access">アクセス</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="mr-hero">
+            <div class="mr-hero-bg"></div>
+            <div class="mr-hero-content">
+                <p class="mr-hero-subtitle">Private Therapy & Conditioning</p>
+                <h1 class="mr-hero-title mr-title">ME RIGHT</h1>
+                <p class="mr-text-serif" style="font-size: 1.5rem;">Precision. Mobility. Recovery.</p>
+            </div>
+        </section>
+
+        <!-- Philosophy -->
+        <section class="mr-section mr-philosophy">
+            <div class="mr-container">
+                <p class="mr-philosophy-text">
+                    痛みをごまかすのは、もう終わりにしよう。<br>
+                    <br>
+                    機能解剖学に基づく「徒手療法」と<br>
+                    正しい動きを再学習する「運動療法」。<br>
+                    <br>
+                    その二つが重なったとき、<br>
+                    身体は本来の自由を取り戻す。
+                </p>
+            </div>
+        </section>
+
+        <!-- Strengths / Gallery -->
+        <section class="mr-section">
+            <div class="mr-container">
+                <div class="mr-gallery">
+                    <div class="mr-gallery-item">
+                        <img src="picture/meright.png" class="mr-gallery-img" alt="Therapy Session">
+                    </div>
+                    <div class="mr-gallery-text">
+                        <span class="mr-hero-subtitle" style="color: #0083B0;">01. Approach</span>
+                        <h3>See the Cause.</h3>
+                        <p>
+                            「なぜ痛むのか」「なぜ動かないのか」。<br>
+                            主観だけでなく、機能解剖学に基づき論理的に紐解きます。<br>
+                            国際基準の研修を修了したセラピストが、その「原因」にアプローチします。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mr-gallery" style="direction: rtl;"> <!-- Reverse layout -->
+                    <div class="mr-gallery-item" style="direction: ltr;">
+                        <!-- Placeholder for Exercise/Movement Image (Using generic if logic or existing) -->
+                        <div
+                            style="background: #e0e0e0; width: 100%; height: 400px; display: flex; align-items: center; justify-content: center; color: #999;">
+                            Image: Movement / Pilates
+                        </div>
+                    </div>
+                    <div class="mr-gallery-text" style="direction: ltr;">
+                        <span class="mr-hero-subtitle" style="color: #0083B0;">02. Movement</span>
+                        <h3>Relearn to Move.</h3>
+                        <p>
+                            緩めるだけでは、身体は忘れてしまう。<br>
+                            正しい筋肉の使い方、関節の動かし方を「運動」を通して再入力。<br>
+                            痛みの出ない身体を、あなた自身の手に入れる。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <section class="mr-section" style="background: white;">
+            <div class="mr-container" style="text-align: center;">
+                <h2 class="mr-title" style="font-size: 3rem; margin-bottom: 20px;">料金・プラン</h2>
+                <div style="margin: 40px 0;">
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 40px;">
+                        初回体験、継続的なメンテナンス、学生向けプランなど<br>
+                        ライフスタイルに合わせたプランをご用意しています。
+                    </p>
+                    <a href="rates.html" class="mr-cta-btn">料金・プランを見る</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Staff -->
+        <section class="mr-section">
+            <div class="mr-container">
+                <div class="mr-staff">
+                    <img src="picture/MSI seminar.jpeg" alt="Yasunaga Daiki" class="mr-staff-img">
+                    <div class="mr-staff-info">
+                        <span class="mr-hero-subtitle">Therapist</span>
+                        <h3 class="mr-title" style="font-size: 2.5rem; margin: 10px 0;">Daiki Yasunaga</h3>
+                        <p class="mr-text-serif" style="color: #666; margin-bottom: 20px;">Physical Therapist /
+                            Co-Founder</p>
+                        <p style="line-height: 1.8;">
+                            病院勤務時代、手術後も痛みに苦しむ多くの患者様と向き合ってきました。<br>
+                            米国セントルイスでの研修（Shirley Sahrmann教授）を経て確信したのは、<br>
+                            「痛みの原因は、日々の動きの中にある」ということ。<br>
+                            <br>
+                            あなたの身体が持つ可能性を、最大限に引き出します。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Access -->
+        <section class="mr-section" id="access">
+            <div class="mr-container">
+                <h2 class="mr-title" style="font-size: 2.5rem; text-align: center; margin-bottom: 60px;">アクセス</h2>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 60px; justify-content: center;">
+                    <!-- Map Side -->
+                    <div style="flex: 1; min-width: 320px;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.1394556875853!2d132.0955112745463!3d33.96325492242591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354517de20fae889%3A0xd072694a214d0975!2z44CSNzQyLTAwMzEg5bGx5Y-j55yM5p-z5LqV5biC5Y2X55S677yX5LiB55uu77yY4oiS77yS!5e0!3m2!1sja!2sjp!4v1768500934372!5m2!1sja!2sjp"
+                            width="100%" height="450" style="border:0; border-radius: 8px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <!-- Info Side -->
+                    <div style="flex: 1; min-width: 300px;">
+                        <h3
+                            style="font-size: 1.4rem; margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
+                            治療院 ME RIGHT</h3>
+
+                        <dl style="margin-bottom: 30px; line-height: 1.8;">
+                            <dt style="font-weight: bold; margin-top: 15px;">所在地</dt>
+                            <dd>〒742-0031<br>山口県柳井市南町7丁目8-12</dd>
+
+                            <dt style="font-weight: bold; margin-top: 15px;">お車でお越しの方</dt>
+                            <dd>柳井市役所より車で約2分</dd>
+
+                            <dt style="font-weight: bold; margin-top: 15px;">駐車場</dt>
+                            <dd>
+                                店舗前に駐車場あり<br>
+                                <span
+                                    style="font-size: 0.9rem; color: #666;">※駐車位置がご不明な場合は、ご予約時または来院前にお気軽にご連絡ください。</span>
+                            </dd>
+                        </dl>
+
+                        <h3
+                            style="font-size: 1.4rem; margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-top: 40px;">
+                            ご来院について</h3>
+                        <ul style="list-style: none; padding: 0; line-height: 2;">
+                            <li>• 治療院 ME RIGHTは完全予約制です</li>
+                            <li>• 初めての方は、ご予約時間の5分前を目安にお越しください</li>
+                            <li>• 待合スペースは最小限となっております</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Area in Access -->
+                <div
+                    style="background-color: #f9f9f9; padding: 40px; border-radius: 8px; margin-top: 60px; text-align: center;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 20px;">予約・お問い合わせ</h3>
+                    <p style="margin-bottom: 30px; line-height: 1.8;">
+                        ご予約・ご相談は<br>LINE または メールにて受け付けています。<br><br>
+                        「場所を確認したい」「駐車場について聞きたい」といった<br>
+                        簡単なご質問でも問題ありません。
+                    </p>
+                    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                        <a href="https://line.me/R/ti/p/@example" class="mr-cta-btn"
+                            style="min-width: 200px;">LINEで予約・相談</a>
+                        <a href="mailto:info@terrasta.jp" class="mr-cta-btn"
+                            style="min-width: 200px; background: #666; border-color: #666;">メールで問い合わせ</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <script>
+        // Initialize Lenis for smooth scroll
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

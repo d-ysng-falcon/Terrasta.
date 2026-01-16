@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://maps.googleapis.com https://maps.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://maps.gstatic.com https://*.googleapis.com https://*.google.com; frame-src https://www.google.com https://maps.google.com; connect-src 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="description" content="株式会社Terrasta.は医療・在宅・自費リハビリをつなぐ仕組みを地域につくります。">
+    <title>株式会社Terrasta. | 医療・在宅・自費リハビリをつなぐ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- New 2-Layer Header -->
+    <header class="site-header">
+        <!-- Layer 1: Top (Company Common) -->
+        <div class="header-top">
+            <div class="container header-top-inner">
+                <!-- Left: Logo -->
+                <a href="index.html" class="logo">
+                    <img src="picture/terrasta..png" alt="Terrasta." style="height: 90px; vertical-align: middle;">
+                </a>
+
+                <!-- Right: Common Nav (Desktop) -->
+                <nav class="common-nav desktop-only">
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">Terrasta.について</a></li>
+                        <li><a href="contact.html" class="btn btn-primary btn-contact-header">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Hamburger Button -->
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Layer 2: Bottom (Business Specific) -->
+        <div class="header-bottom desktop-only">
+            <div class="container">
+                <!-- Row 1: Popi -->
+                <div class="business-nav-row popi-row">
+                    <div class="row-label popi-label">訪問看護リハビリステーション ぽぴぃ</div>
+                    <nav class="business-nav">
+                        <ul>
+                            <li><a href="popi.html">私たちについて</a></li>
+                            <li><a href="popi.html">サービス</a></li>
+                            <li><a href="message.html">代表あいさつ</a></li>
+                            <li><a href="staff.html">スタッフ紹介</a></li>
+                            <li><a href="faq.html">よくある質問</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Row 2: ME RIGHT -->
+                <div class="business-nav-row meright-row">
+                    <div class="row-label meright-label">治療院 ME RIGHT</div>
+                    <nav class="business-nav">
+                        <ul>
+                            <li><a href="meright.html">ME RIGHTについて</a></li>
+                            <li><a href="rates.html">料金・プラン</a></li>
+                            <li><a href="meright.html#flow">ご利用の流れ</a></li>
+                            <li><a href="message.html">代表あいさつ</a></li>
+                            <li><a href="staff.html">スタッフ紹介</a></li>
+                            <li><a href="faq.html">よくある質問</a></li>
+                            <li><a href="meright.html#access">アクセス</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenu">
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label">Terrasta.</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">Terrasta.について</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label" style="color: #E67E22;">訪問看護リハビリステーション ぽぴぃ</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="popi.html">私たちについて</a></li>
+                    <li><a href="popi.html">サービス</a></li>
+                    <li><a href="message.html">代表あいさつ</a></li>
+                    <li><a href="staff.html">スタッフ紹介</a></li>
+                    <li><a href="faq.html">よくある質問</a></li>
+
+                </ul>
+            </div>
+
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label" style="color: #009688;">治療院 ME RIGHT</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="meright.html">ME RIGHTについて</a></li>
+                    <li><a href="rates.html">料金・プラン</a></li>
+                    <li><a href="meright.html#flow">ご利用の流れ</a></li>
+                    <li><a href="message.html">代表あいさつ</a></li>
+                    <li><a href="staff.html">スタッフ紹介</a></li>
+                    <li><a href="faq.html">よくある質問</a></li>
+                    <li><a href="meright.html#access">アクセス</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content" style="text-align: left;">
+                <p class="font-english" style="font-size: 2rem; color: var(--color-primary); margin-bottom: 10px;">For
+                    the Community</p>
+                <h1 style="line-height: 1.4; margin-bottom: 30px;">
+                    地域に、安心できる<br>
+                    <span style="background: linear-gradient(transparent 60%, #ffe0b2 60%);">「受け皿」</span>をつくる。
+                </h1>
+                <p style="font-size: 1.1rem; margin-bottom: 40px;">
+                    訪問看護リハビリステーション ぽぴぃ / 治療院 ME RIGHT<br>
+                    医療と介護をつなぐ橋渡し役として。
+                </p>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <a href="#about" class="btn btn-secondary" style="border-radius: 50px; padding: 15px 40px;">
+                        Read More
+                    </a>
+                </div>
+            </div>
+            <!-- Background Image Placeholder (To be replaced with actual image) -->
+            <div
+                style="position: absolute; right: -10%; top: 50%; transform: translateY(-50%); width: 50vw; height: 80vh; background: #e0f2f1; border-radius: 30% 0 0 30%; z-index: 1;">
+            </div>
+        </section>
+
+        <!-- About Terrasta. -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-image"
+                        style="background: #fdf2e9; display: flex; align-items: center; justify-content: center;">
+                        <!-- Placeholder for Vision Image -->
+                        <span class="font-english"
+                            style="font-size: 3rem; color: var(--color-primary); opacity: 0.3;">Vision</span>
+                    </div>
+                    <div class="about-text">
+                        <h2 class="font-english" style="color: var(--color-primary); margin-bottom: 10px;">Mission &
+                            Vision</h2>
+                        <h3>制度の枠からこぼれてしまう人々を支える</h3>
+                        <p>
+                            周東総合病院での経験を通じ、十分なリハビリを受けられない方々が多く存在することを知りました。<br>
+                            私たちは、そのような方々の生活を支え、地域に安心できる「受け皿」をつくることを使命としています。
+                        </p>
+                        <ul style="list-style: none; margin-top: 20px; padding-left: 0;">
+                            <li style="margin-bottom: 15px; display: flex; align-items: center;">
+                                <span style="color: var(--color-secondary); margin-right: 10px;">✔</span>
+                                地域を元気にする仕組みづくり
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: center;">
+                                <span style="color: var(--color-secondary); margin-right: 10px;">✔</span>
+                                人材が輝ける場所の提供
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: center;">
+                                <span style="color: var(--color-secondary); margin-right: 10px;">✔</span>
+                                医療介護連携の中心拠点
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ③ 事業紹介 (Services) -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="services-grid">
+                    <!-- POPI -->
+                    <div class="card service-card">
+                        <div class="card-header">
+                            <h3 class="font-english" style="font-size: 1.8rem; margin-bottom: 5px;">Popi</h3>
+                            <h4 style="font-size: 1.2rem; margin-bottom: 15px;">訪問看護リハビリステーション ぽぴぃ</h4>
+                        </div>
+                        <p>
+                            <strong>「家で暮らしたい」を、医療とリハビリで支える。</strong>
+                        </p>
+                        <ul style="margin: 15px 0 20px 20px; line-height: 1.8;">
+                            <li>整形外科術後の在宅フォロー</li>
+                            <li>脳卒中・難病・精神科看護まで幅広く対応</li>
+                            <li>さいとう整形外科との強固な連携</li>
+                        </ul>
+                        <div style="margin-top: auto;">
+                            <a href="popi.html" class="btn"
+                                style="width: 100%; text-align: center; font-size: 1rem; background-color: var(--color-popi-orange); color: white; border: none;">訪問看護について詳しく見る</a>
+                        </div>
+                    </div>
+
+                    <!-- ME RIGHT -->
+                    <div class="card service-card">
+                        <div class="card-header">
+                            <h3 class="font-english"
+                                style="font-size: 1.8rem; margin-bottom: 5px; color: var(--color-primary);">ME RIGHT
+                            </h3>
+                            <h4 style="font-size: 1.2rem; margin-bottom: 15px;">自費リハビリ・運動療法 治療院</h4>
+                        </div>
+                        <p>
+                            <strong>機能解剖に基づく徒手療法 × 運動療法で、<br>痛みと動きの本質に向き合う。</strong>
+                        </p>
+                        <ul style="margin: 15px 0 20px 20px; line-height: 1.8;">
+                            <li>スポーツ障害・慢性疼痛への専門的アプローチ</li>
+                            <li>機能解剖と動作評価に基づいたサポートを実施</li>
+                            <li style="letter-spacing: -0.05em;">国家資格（理学療法士）およびトレーナー資格を有するセラピストが、評価から運動まで一貫してマンツーマンで対応
+                            </li>
+                        </ul>
+                        <div style="margin-top: auto;">
+                            <a href="meright.html" class="btn btn-primary"
+                                style="width: 100%; text-align: center;">初回体験・メニューを見る</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ④ Terrasta.の強み (Strengths) -->
+        <section id="strengths" style="background-color: var(--color-bg-body);">
+            <div class="container">
+                <div class="services-grid"
+                    style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                    <!-- Strength 1 -->
+                    <div class="card" style="text-align: center;">
+                        <h4 style="color: var(--color-primary);">整形外科連携 × 在宅・自費リハビリ</h4>
+                        <p style="word-break: keep-all; line-height: 1.8;">外来 → 在宅 → 自費へ。<br>切れ目のない支援体制を構築しています。</p>
+                    </div>
+                    <!-- Strength 2 -->
+                    <div class="card" style="text-align: center;">
+                        <h4 style="color: var(--color-primary);">制度の枠を越えたサポート</h4>
+                        <p style="word-break: keep-all; line-height: 1.8;">保険・自費を柔軟に組み合わせ、<br>「もっと良くなりたい」という想いに応えます。</p>
+                    </div>
+                    <!-- Strength 3 -->
+                    <div class="card" style="text-align: center;">
+                        <h4 style="color: var(--color-primary);">医療・生活・運動を一体で考える</h4>
+                        <p style="word-break: keep-all; line-height: 1.8;">身体だけでなく、生活背景や目標まで含めて支援します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ⑤ メッセージ (Message) -->
+        <section id="message" style="background-color: #FDF2E9;">
+            <div class="container" style="max-width: 800px; text-align: center;">
+                <h2>どこに相談すればいいか、迷ったときは</h2>
+                <p>
+                    病院に行くほどではないけれど不安がある。<br>
+                    在宅生活が続けられるか心配。<br>
+                    リハビリが終わってしまい、この先が分からない。<br>
+                    そんなときこそ、私たちにご相談ください。<br>
+                    内容が整理できていなくても構いません。
+                </p>
+            </div>
+        </section>
+
+        <!-- ⑥ クロージングCTA (Closing) -->
+        <section id="contact" style="background-color: var(--color-text-main); color: white; text-align: center;">
+            <div class="container">
+                <h2 style="color: white;">まずは一歩、相談することから</h2>
+                <div
+                    style="display: flex; flex-direction: column; gap: 16px; align-items: center; justify-content: center; margin-top: 32px;">
+                    <a href="popi.html" class="btn btn-secondary" style="min-width: 300px;">訪問看護・訪問リハビリのご相談</a>
+                    <a href="meright.html" class="btn btn-primary" style="min-width: 300px;">治療院 ME RIGHT 初回体験・ご相談</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 株式会社Terrasta. All Rights Reserved.</p>
+            <div style="margin-top: 10px; font-size: 0.9rem;">
+                <a href="company.html" style="color: #b2bec3; text-decoration: none; margin: 0 10px;">会社概要</a>
+                <a href="legal.html" style="color: #b2bec3; text-decoration: none; margin: 0 10px;">特定商取引法に基づく表記</a>
+                <a href="terms.html" style="color: #b2bec3; text-decoration: none; margin: 0 10px;">利用規約</a>
+                <a href="privacy.html" style="color: #b2bec3; text-decoration: none; margin: 0 10px;">プライバシーポリシー</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <a href="https://line.me/R/ti/p/@example" target="_blank" class="floating-cta-btn floating-cta-line">LINE</a>
+        <a href="tel:0000000000" class="floating-cta-btn floating-cta-tel">TEL</a>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
