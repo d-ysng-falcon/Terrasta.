@@ -249,4 +249,33 @@
     .mobile-only {
         display: block !important;
     }
+
+    /* Ensure header height is compact on mobile */
+    .site-header {
+        height: 70px;
+        /* Fixed height for consistency */
+        overflow: visible;
+    }
+
+    .header-top {
+        height: 70px;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .header-top-inner {
+        width: 100%;
+    }
+
+    .logo img {
+        height: 50px !important;
+        /* Smaller logo on mobile */
+    }
+
+    /* Adjust hamburger menu position if needed */
+    .mobile-menu-btn {
+        margin-left: auto;
+    }
 }
