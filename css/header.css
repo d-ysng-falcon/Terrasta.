@@ -32,7 +32,8 @@
 
 .common-nav ul {
     display: flex;
-    gap: 30px;
+    gap: 15px;
+    /* Reduced from 30px */
     align-items: center;
     list-style: none;
     margin: 0;
