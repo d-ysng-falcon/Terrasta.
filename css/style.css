@@ -543,3 +543,29 @@ footer p {
     min-width: 100px;
   }
 }
+
+/* =========================================
+   Utility Classes for Responsive Line Breaks
+   ========================================= */
+.pc-only {
+  display: inline;
+}
+
+.sp-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .pc-only {
+    display: none;
+  }
+
+  .sp-only {
+    display: inline;
+  }
+
+  /* Improve text readability on mobile */
+  p {
+    line-height: 1.8;
+  }
+}
