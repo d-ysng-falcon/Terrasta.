@@ -7,8 +7,8 @@
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://maps.googleapis.com https://maps.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://maps.gstatic.com https://*.googleapis.com https://*.google.com; frame-src https://www.google.com https://maps.google.com; connect-src 'self';">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta name="description" content="訪問看護リハビリステーションぽぴぃの骨粗鬆症在宅支援。治療継続、服薬管理、転倒予防をサポートします。">
-    <title>骨粗鬆症・在宅支援 | 訪問看護リハビリステーション ぽぴぃ</title>
+    <meta name="description" content="骨粗鬆症の治療を在宅で継続するための専用ページ。訪問看護リハビリステーションぽぴぃが、注射・服薬管理や転倒予防をサポートします。">
+    <title>骨粗鬆症の在宅支援 | 訪問看護リハビリステーション ぽぴぃ</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,56 +18,46 @@
             font-family: 'Noto Sans JP', sans-serif;
         }
 
-        .osteo-hero {
-            background-color: #FFF3E0;
-            /* Light Orange base */
-            padding: 120px 0 60px;
+        .os-hero {
+            background: linear-gradient(135deg, #FFF8E1 0%, #FFF3E0 100%);
+            padding: 100px 0 60px;
             text-align: center;
         }
 
-        .osteo-section {
+        .os-section {
             padding: 80px 0;
         }
 
-        .risk-box {
-            background: #fff;
-            border: 2px solid #E67E22;
-            border-radius: 12px;
-            padding: 30px;
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        .point-card {
+        .os-card {
             background: white;
             padding: 30px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.1);
             margin-bottom: 20px;
-            border-top: 5px solid #E67E22;
         }
 
-        .target-section {
-            background-color: #f9f9f9;
-            padding: 60px 0;
-            margin-top: 40px;
+        .os-check-list {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        .checklist-item {
+        .os-check-item {
+            background: #fff;
+            padding: 15px 20px;
+            border-radius: 50px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 15px;
             font-weight: bold;
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            color: #555;
         }
 
-        .circle-icon {
-            color: #F1C40F;
-            /* Yellow */
+        .os-check-icon {
+            color: #f39c12;
+            margin-right: 15px;
             font-size: 1.2rem;
         }
     </style>
@@ -91,10 +81,11 @@
                         <li><a href="message.html">代表あいさつ</a></li>
                         <li><a href="staff.html">スタッフ紹介</a></li>
                         <li><a href="faq.html">よくある質問</a></li>
+                        <!-- Corrected Link for Popi Contact -->
                         <li><a href="contact.html?type=popi" class="btn btn-primary btn-contact-header">お問い合わせ</a></li>
                     </ul>
                 </nav>
-                <button class="mobile-menu-btn" aria-label="Menu">
+                <button class="mobile-menu-btn" aria-label="Menu" onclick="toggleMobileMenu()">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -103,7 +94,7 @@
         </div>
         <div class="mobile-menu-overlay" id="mobileMenu">
             <div class="mobile-nav-group">
-                <div class="mobile-nav-label" style="color: #E67E22;">訪問看護リハビリステーション ぽぴぃ</div>
+                <div class="mobile-nav-label" style="color: #f39c12;">訪問看護ステーション ぽぴぃ</div>
                 <ul class="mobile-nav-list">
                     <li><a href="index.html">TOP</a></li>
                     <li><a href="popi.html">私たちについて</a></li>
@@ -119,176 +110,194 @@
 
     <main>
         <!-- Hero -->
-        <section class="osteo-hero">
+        <section class="os-hero">
             <div class="container">
-                <p style="font-weight: bold; color: #E67E22; margin-bottom: 20px;">訪問看護リハビリステーション ぽぴぃの取り組み</p>
-                <h1 style="font-size: 2.5rem; line-height: 1.4; margin-bottom: 20px;">
-                    骨粗鬆症の治療を、<br>
-                    在宅でも途切れさせないために
+                <h1 style="font-size: 2.2rem; line-height: 1.4; margin-bottom: 20px; color: #2D3436;">
+                    骨粗鬆症の治療を、<br>在宅でも途切れさせないために
                 </h1>
-                <p>「生活上の問題」で治療をあきらめてしまわないように。<br>私たちがご自宅での治療継続をサポートします。</p>
+                <p
+                    style="font-size: 1.1rem; color: #f39c12; font-weight: bold; margin-bottom: 30px; display: inline-block; border-bottom: 2px solid #f39c12; padding-bottom: 5px;">
+                    ― 訪問看護リハビリステーション ぽぴぃの取り組み ―
+                </p>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.8;">
+                    医療機関・ケアマネジャー・ご家族が<br>
+                    「在宅でどう支えるか」を一緒に考えるためのページです。
+                </p>
             </div>
         </section>
 
-        <!-- Intro Data -->
-        <section class="osteo-section">
+        <!-- Problem / Background -->
+        <section class="os-section">
             <div class="container" style="max-width: 800px;">
                 <p style="margin-bottom: 30px; line-height: 1.8;">
-                    骨粗鬆症は、日本に約1,280万人の患者さんがいると言われる、決して珍しくない疾患です。<br>
-                    しかし現実には、<strong>治療を開始しても2年後には半数以上が中断してしまう</strong>というデータがあります。
+                    骨粗鬆症は、日本に約1,280万人の患者さんがいるとされる身近な疾患です。<br>
+                    一方で、治療を開始しても<strong>2年後には半数以上が中断してしまう</strong>という現状があります。
                 </p>
-                <div style="background: #fdf2e9; padding: 30px; border-radius: 8px;">
-                    <h3 style="text-align: center; margin-bottom: 20px; color: #E67E22;">治療中断の理由</h3>
-                    <p style="text-align: center; margin-bottom: 20px;">
-                        その理由の多くは、病気そのものではなく、以下のような<strong>「生活上の問題」</strong>です。</p>
-                    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                        <div
-                            style="background: white; padding: 15px 25px; border-radius: 30px; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                            通院が困難になる</div>
-                        <div
-                            style="background: white; padding: 15px 25px; border-radius: 30px; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                            注射や服薬管理への不安</div>
-                        <div
-                            style="background: white; padding: 15px 25px; border-radius: 30px; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                            生活環境の変化</div>
-                    </div>
+                <div style="background: #FFF8E1; padding: 30px; border-radius: 12px; margin-bottom: 40px;">
+                    <h3 style="text-align: center; font-size: 1.3rem; margin-bottom: 20px; color: #d35400;">治療中断の背景</h3>
+                    <ul style="list-style: none; padding: 0; text-align: center; line-height: 2;">
+                        <li>● 通院が難しくなる</li>
+                        <li>● 注射や服薬管理への不安</li>
+                        <li>● 生活環境や身体機能の変化</li>
+                    </ul>
+                    <p style="text-align: center; margin-top: 20px; font-weight: bold;">
+                        病気そのもの以外の課題が多く存在します。
+                    </p>
                 </div>
+                <p style="text-align: center; font-weight: bold; font-size: 1.1rem;">
+                    訪問看護リハビリステーション ぽぴぃでは、<br>
+                    こうした課題に対し、在宅での骨粗鬆症治療継続支援を行っています。
+                </p>
+            </div>
+        </section>
 
-                <div class="risk-box">
-                    <h3 style="font-size: 1.6rem; color: #c0392b; margin-bottom: 20px;">骨折は「生活」だけでなく「命」にも関わります</h3>
-                    <p style="line-height: 1.8; text-align: left;">
+        <!-- Risk -->
+        <section class="os-section" style="background-color: #fcfcfc;">
+            <div class="container" style="max-width: 800px;">
+                <h2 style="text-align: center; margin-bottom: 40px; color: #c0392b;">骨粗鬆症による骨折のリスク</h2>
+                <div class="os-card" style="border-left: 5px solid #c0392b;">
+                    <p style="line-height: 1.8; margin-bottom: 20px;">
                         骨粗鬆症による骨折は、単なるケガではありません。<br>
-                        特に <strong>大腿骨近位部骨折（股関節の骨折）</strong> は、骨折後1年以内の死亡率が約10％前後とされ、
-                        生活機能の低下だけでなく、生命予後にも大きな影響を及ぼします。
+                        特に<strong>大腿骨近位部骨折（股関節の骨折）</strong>は、
+                        骨折後1年以内の死亡率が約10％前後とされ、
+                        生活機能だけでなく生命予後にも大きな影響を与えます。
                     </p>
-                    <p style="line-height: 1.8; text-align: left; margin-top: 20px;">
-                        また、「背骨の圧迫骨折」や「手首の骨折」も再骨折や要介護につながりやすく、
-                        骨折が連鎖する状態は <strong>「骨卒中」</strong> とも呼ばれています。
+                    <p style="line-height: 1.8;">
+                        また、「背骨の圧迫骨折」や「手首の骨折」も再骨折や要介護状態につながりやすく、
+                        これらが連鎖する状態は<strong>「骨卒中」</strong>とも呼ばれています。
                     </p>
-                    <div style="margin-top: 30px; font-size: 1.2rem; font-weight: bold; color: #E67E22;">
-                        「転ばない」「折らない」「治療を続ける」<br>
-                        この3点を在宅でどう支えるかが、極めて重要です。
-                    </div>
                 </div>
+                <p style="text-align: center; font-weight: bold; font-size: 1.2rem; margin-top: 30px; color: #2D3436;">
+                    治療を継続し、転倒や再骨折を防ぐことが、<br>
+                    在宅生活を守る上で非常に重要です。
+                </p>
             </div>
         </section>
 
         <!-- For Professionals -->
-        <section class="target-section">
+        <section class="os-section">
             <div class="container" style="max-width: 900px;">
-                <h2
-                    style="font-size: 1.8rem; color: #E67E22; border-bottom: 3px solid #E67E22; padding-bottom: 10px; margin-bottom: 40px;">
-                    医療機関・ケアマネジャーの皆さまへ
-                </h2>
-                <h3 style="margin-bottom: 30px; font-size: 1.4rem;">在宅移行後の「治療継続」を支える訪問看護です</h3>
-                <p style="margin-bottom: 40px; line-height: 1.8;">
-                    訪問看護リハビリステーション ぽぴぃでは、
-                    <strong>骨粗鬆症マネージャー</strong>の専門性を活かし、
-                    医療機関と連携しながら、在宅での骨粗鬆症治療継続を支援しています。
-                </p>
+                <div style="background: #fdf2e9; border-radius: 20px; padding: 40px 30px; border: 2px solid #f39c12;">
+                    <div
+                        style="display: inline-block; background: #f39c12; color: white; padding: 5px 20px; border-radius: 20px; margin-bottom: 20px; font-weight: bold;">
+                        医療機関・ケアマネジャーの皆さまへ</div>
+                    <h2 style="font-size: 1.8rem; margin-bottom: 30px; color: #d35400;">骨粗鬆症の在宅移行後を支える訪問看護です</h2>
 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-                    <div class="point-card">
-                        <h4 style="font-size: 1.2rem; margin-bottom: 15px; color: #E67E22;">ぽぴぃが提供できる在宅支援</h4>
-                        <ul style="line-height: 2; padding-left: 20px;">
-                            <li>皮下注射治療の継続サポート</li>
+                    <p style="margin-bottom: 30px; line-height: 1.8;">
+                        訪問看護リハビリステーション ぽぴぃでは、
+                        骨粗鬆症マネージャーの専門性を活かし、
+                        医療機関・ケアマネジャーの皆さまと連携しながら、
+                        在宅での骨粗鬆症治療・再骨折予防を支援しています。
+                    </p>
+
+                    <div class="os-card">
+                        <h3 style="color: #f39c12; margin-bottom: 15px;">在宅で対応可能な支援</h3>
+                        <ul style="line-height: 1.9; padding-left: 20px; list-style-type: square;">
+                            <li>骨粗鬆症治療薬（皮下注射）の継続サポート</li>
                             <li>服薬管理・副作用の観察</li>
-                            <li>転倒リスク評価と生活環境の調整</li>
-                            <li>リハビリによる再骨折予防・身体機能維持</li>
+                            <li>転倒リスク評価・生活環境の調整</li>
+                            <li>リハビリによる身体機能維持・再骨折予防</li>
                         </ul>
                     </div>
-                    <div class="point-card">
-                        <h4 style="font-size: 1.2rem; margin-bottom: 15px; color: #E67E22;">医療機関連携について</h4>
-                        <p style="line-height: 1.8;">
-                            訪問看護導入にあたっては、さいとう整形外科様をはじめとする各医療機関の主治医の先生と連携し、訪問看護指示書の発行をお願いしております。<br>
-                            治療方針を尊重しながら、在宅での実行・継続部分を担う立場として関わらせていただきます。
-                        </p>
-                    </div>
-                </div>
-                <div style="margin-top: 30px; text-align: center; color: #555;">
-                    <p style="font-weight: bold; font-size: 1.1rem;">
+
+                    <p style="margin-bottom: 30px; font-weight: bold; text-align: center;">
                         「通えなくなってから」ではなく、<br>
                         通えなくなる前から支えることを大切にしています。
+                    </p>
+
+                    <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: #555;">医療機関連携について</h3>
+                    <p style="line-height: 1.8; margin-bottom: 0;">
+                        訪問看護導入時には、主治医の先生より訪問看護指示書の発行をお願いしております。<br>
+                        治療方針を尊重しつつ、在宅での実行・継続部分を担う立場として連携いたします。
                     </p>
                 </div>
             </div>
         </section>
 
         <!-- For Users -->
-        <section class="osteo-section">
+        <section class="os-section" style="background-color: #f0fdf4;"> <!-- Soft Green tint for users -->
             <div class="container" style="max-width: 900px;">
-                <h2
-                    style="font-size: 1.8rem; color: #27ae60; border-bottom: 3px solid #27ae60; padding-bottom: 10px; margin-bottom: 40px;">
-                    ご利用者さま・ご家族の方へ
-                </h2>
-                <h3 style="margin-bottom: 30px; font-size: 1.4rem;">「通えなくなったら終わり」ではありません</h3>
-                <p style="margin-bottom: 40px; line-height: 1.8;">
-                    骨粗鬆症の治療は、続けることそのものが最大の予防です。<br>
-                    しかし、「通院が大変」「注射などの管理が不安」といった理由で、治療をあきらめてしまう方が少なくありません。
-                </p>
+                <div style="background: white; border-radius: 20px; padding: 40px 30px;">
+                    <div
+                        style="display: inline-block; background: #27ae60; color: white; padding: 5px 20px; border-radius: 20px; margin-bottom: 20px; font-weight: bold;">
+                        ご利用者さま・ご家族の方へ</div>
+                    <h2 style="font-size: 1.8rem; margin-bottom: 30px; color: #27ae60;">「通えなくなったら終わり」ではありません</h2>
 
-                <div style="background-color: #f0fdf4; padding: 40px; border-radius: 12px; margin-bottom: 40px;">
-                    <h3 style="text-align: center; color: #27ae60; margin-bottom: 30px;">ぽぴぃは、在宅での治療継続を支えます</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-                        <div
-                            style="background: white; padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                            <div style="font-size: 2rem; margin-bottom: 10px;">💉</div>
-                            <p style="font-weight: bold;">ご自宅での注射<br>服薬管理のサポート</p>
-                        </div>
-                        <div
-                            style="background: white; padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                            <div style="font-size: 2rem; margin-bottom: 10px;">👀</div>
-                            <p style="font-weight: bold;">体調や副作用の<br>見守り</p>
-                        </div>
-                        <div
-                            style="background: white; padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                            <div style="font-size: 2rem; margin-bottom: 10px;">🚶</div>
-                            <p style="font-weight: bold;">転ばないための<br>身体づくり・環境調整</p>
-                        </div>
-                        <div
-                            style="background: white; padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                            <div style="font-size: 2rem; margin-bottom: 10px;">🗣️</div>
-                            <p style="font-weight: bold;">不安や疑問への<br>相談対応</p>
-                        </div>
-                    </div>
-                    <p
-                        style="text-align: center; margin-top: 30px; font-weight: bold; font-size: 1.1rem; color: #27ae60;">
-                        「自宅での生活を続けながら、治療も続けたい」<br>その想いに寄り添います。
+                    <p style="margin-bottom: 30px; line-height: 1.8;">
+                        骨粗鬆症の治療は、続けることそのものが最大の予防です。<br>
+                        しかし、「通院がつらくなってきた」「注射や薬の管理が不安」「転倒が心配になってきた」…<br>
+                        このような理由で、治療を中断してしまう方が少なくありません。
                     </p>
-                </div>
 
-                <h3 style="margin-bottom: 20px;">こんなときは、ぜひご相談ください</h3>
-                <div style="max-width: 600px; margin: 0 auto;">
-                    <div class="checklist-item">
-                        <span class="circle-icon">●</span> 骨粗鬆症の治療を続けられるか不安
+                    <div style="background: #eaffea; padding: 20px; border-radius: 12px; margin-bottom: 30px;">
+                        <h3 style="color: #27ae60; margin-bottom: 15px;">ぽぴぃの在宅骨粗鬆症支援</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                            <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
+                                <li>ご自宅での注射・服薬管理サポート</li>
+                                <li>体調・副作用の見守り</li>
+                            </ul>
+                            <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
+                                <li>転倒予防のためのリハビリ</li>
+                                <li>不安や疑問への相談対応</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="checklist-item">
-                        <span class="circle-icon">●</span> 退院後の生活が心配
-                    </div>
-                    <div class="checklist-item">
-                        <span class="circle-icon">●</span> 通院が難しくなってきた
-                    </div>
-                    <div class="checklist-item">
-                        <span class="circle-icon">●</span> 転倒や再骨折が心配
-                    </div>
+
+                    <p style="text-align: center; font-weight: bold; font-size: 1.1rem; color: #27ae60;">
+                        「自宅での生活を続けながら、治療も続けたい」<br>
+                        その想いに寄り添います。
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- Closing CTA -->
-        <section style="background-color: #E67E22; color: white; text-align: center; padding: 80px 0;">
+        <!-- Checklist -->
+        <section class="os-section">
             <div class="container">
-                <h2 style="font-size: 2rem; margin-bottom: 20px;">骨粗鬆症の在宅支援なら、ぽぴぃ。</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 40px;">
-                    そう言っていただけるステーションを目指しています。<br>
-                    まずはお気軽にご相談ください。
+                <h2 style="text-align: center; margin-bottom: 40px;">こんな方はぜひご相談ください</h2>
+                <ul class="os-check-list">
+                    <li class="os-check-item">
+                        <span class="os-check-icon">✔</span> 骨粗鬆症の治療を続けられるか不安
+                    </li>
+                    <li class="os-check-item">
+                        <span class="os-check-icon">✔</span> 退院後の生活に不安がある
+                    </li>
+                    <li class="os-check-item">
+                        <span class="os-check-icon">✔</span> 通院が難しくなってきた
+                    </li>
+                    <li class="os-check-item">
+                        <span class="os-check-icon">✔</span> 転倒や再骨折が心配
+                    </li>
+                </ul>
+                <p style="text-align: center; margin-top: 40px; font-weight: bold;">
+                    骨粗鬆症の在宅支援なら、訪問看護リハビリステーション ぽぴぃ。<br>
+                    地域での「相談しやすい受け皿」を目指しています。
                 </p>
-                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                    <a href="contact.html?type=popi" class="btn"
-                        style="background: white; color: #E67E22; min-width: 250px; font-weight: bold;">お問い合わせ・ご相談</a>
-                    <a href="popi.html" class="btn"
-                        style="background: rgba(255,255,255,0.2); color: white; min-width: 250px; border: 2px solid white;">ぽぴぃ
-                        トップへ戻る</a>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section style="background-color: #2D3436; color: white; padding: 80px 0;">
+            <div class="container" style="text-align: center;">
+                <h2 style="color: white; margin-bottom: 40px;">ご相談・お問い合わせ</h2>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+                    <!-- Pro -->
+                    <div style="flex: 1; min-width: 300px; max-width: 400px;">
+                        <h3 style="font-size: 1.2rem; color: #f39c12; margin-bottom: 15px;">医療機関・ケアマネジャーの方へ</h3>
+                        <a href="contact.html?type=popi" class="btn btn-secondary"
+                            style="width: 100%; border: 2px solid #f39c12; background: transparent; color: #f39c12;">
+                            骨粗鬆症の在宅支援について相談する
+                        </a>
+                    </div>
+                    <!-- User -->
+                    <div style="flex: 1; min-width: 300px; max-width: 400px;">
+                        <h3 style="font-size: 1.2rem; color: #27ae60; margin-bottom: 15px;">ご利用者さま・ご家族の方へ</h3>
+                        <a href="contact.html?type=popi" class="btn btn-primary"
+                            style="width: 100%; background: #27ae60;">
+                            在宅での骨粗鬆症支援について問い合わせる
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
