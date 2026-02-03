@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja" class="meright-body">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://maps.googleapis.com https://maps.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://maps.gstatic.com https://*.googleapis.com https://*.google.com; frame-src https://www.google.com https://maps.google.com; connect-src 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="description" content="治療院ME RIGHTのご予約・ご相談ページ。WEB予約、LINE相談、メール問い合わせに対応。完全予約制。">
+    <title>ご予約・ご相談 | ME RIGHT Therapy</title>
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Premium Styles -->
+    <link rel="stylesheet" href="css/meright-premium.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+JP:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- Lenis for Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script>
+    <style>
+        .mr-reservation-section {
+            background: white;
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+            margin-bottom: 60px;
+        }
+
+        .mr-reservation-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .mr-reservation-step:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .mr-step-icon {
+            font-size: 2rem;
+            color: #009688;
+            margin-right: 20px;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .mr-btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+            align-items: center;
+        }
+
+        .mr-faq-item {
+            margin-bottom: 30px;
+        }
+
+        .mr-faq-question {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #0083B0;
+            margin-bottom: 10px;
+        }
+
+        .mr-faq-answer {
+            line-height: 1.8;
+            color: #444;
+        }
+
+        @media (min-width: 768px) {
+            .mr-btn-group {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body class="meright-body">
+
+    <!-- Custom ME RIGHT Header (Single Layer) -->
+    <header class="site-header">
+        <div class="header-top">
+            <div class="container header-top-inner">
+                <!-- Left: Logo -->
+                <a href="index.html" class="logo">
+                    <img src="picture/terrasta_new_logo.png" alt="Terrasta."
+                        style="height: 90px; vertical-align: middle;">
+                </a>
+
+                <!-- Right: ME RIGHT Specific Nav (Desktop) -->
+                <nav class="common-nav desktop-only">
+                    <ul>
+                        <li><a href="index.html">TOP</a></li>
+                        <li><a href="meright.html">ME RIGHTについて</a></li>
+                        <li><a href="rates.html">料金・プラン</a></li>
+                        <li><a href="meright.html#flow">ご利用の流れ</a></li>
+                        <li><a href="message.html">代表あいさつ</a></li>
+                        <li><a href="staff.html">スタッフ紹介</a></li>
+                        <li><a href="meright.html#access">アクセス</a></li>
+                        <li><a href="faq.html">よくある質問</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Hamburger Button -->
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenu">
+            <div class="mobile-nav-group">
+                <div class="mobile-nav-label" style="color: #009688;">治療院 ME RIGHT</div>
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html">TOP</a></li>
+                    <li><a href="meright.html">ME RIGHTについて</a></li>
+                    <li><a href="rates.html">料金・プラン</a></li>
+                    <li><a href="meright.html#flow">ご利用の流れ</a></li>
+                    <li><a href="message.html">代表あいさつ</a></li>
+                    <li><a href="staff.html">スタッフ紹介</a></li>
+                    <li><a href="meright.html#access">アクセス</a></li>
+                    <li><a href="faq.html">よくある質問</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Title -->
+        <section class="mr-section" style="padding-bottom: 40px;">
+            <div class="mr-container" style="text-align: center;">
+                <p class="mr-hero-subtitle">RESERVATION</p>
+                <h1 class="mr-title" style="font-size: 3.5rem; margin-bottom: 20px;">ご予約・ご相談</h1>
+                <p style="color: #666;">（完全予約制）</p>
+            </div>
+        </section>
+
+        <!-- Main Reservation Section -->
+        <section class="mr-section" style="padding-top: 0;">
+            <div class="mr-container">
+                <div class="mr-reservation-section">
+                    <div class="mr-philosophy-text"
+                        style="font-size: 1.1rem; text-align: left; max-width: 800px; margin: 0 auto; margin-bottom: 40px;">
+                        <p style="margin-bottom: 30px;">
+                            治療院 ME RIGHT は <strong>完全予約制</strong> です。<br>
+                            ご予約は WEB予約フォーム から24時間受け付けています。
+                        </p>
+                        <p style="margin-bottom: 30px;">
+                            「いきなり予約は不安…」という方は、まず <strong>LINEでご相談</strong> も可能です。<br>
+                            症状や目的を伺ったうえで、最適なメニュー・来院タイミングをご案内します。
+                        </p>
+                        <p style="font-size: 0.9rem; color: #999;">
+                            ※お電話でのご予約は承っておりません（施術中のため対応が難しく、行き違い防止のため）。
+                        </p>
+                    </div>
+
+                    <div class="mr-btn-group">
+                        <a href="#" class="mr-cta-btn"
+                            style="background: #009688; color: white; border-color: #009688; text-align: center; min-width: 250px;">
+                            <span style="display: block; font-size: 0.8rem; margin-bottom: 5px;">▼
+                                ご予約はこちら（24時間受付）</span>
+                            WEB予約フォームへ
+                        </a>
+                        <a href="https://lin.ee/IEAETgK" target="_blank" class="mr-cta-btn"
+                            style="background: #06c755; color: white; border-color: #06c755; text-align: center; min-width: 250px;">
+                            <span style="display: block; font-size: 0.8rem; margin-bottom: 5px;">▼ 事前に相談したい方はこちら</span>
+                            LINEで相談する
+                        </a>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 30px;">
+                        <p style="font-size: 0.9rem; margin-bottom: 10px;">▼ メールでのお問い合わせ</p>
+                        <a href="mailto:me_right@terrasta-connect.jp?body=%E4%BB%A5%E4%B8%8B%E3%82%92%E3%80%80%E6%95%99%E3%81%88%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82"
+                            style="display: inline-block; padding: 10px 30px; border: 1px solid #ddd; border-radius: 4px; color: #666; text-decoration: none; transition: background 0.3s;">
+                            メールで問い合わせる
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Features Section -->
+                <div class="mr-reservation-section">
+                    <h2 class="mr-title" style="font-size: 1.8rem; margin-bottom: 30px; text-align: center;">
+                        WEB予約フォームでできること</h2>
+                    <ul style="list-style: none; padding: 0; max-width: 600px; margin: 0 auto; line-height: 2;">
+                        <li style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <span style="color: #009688; margin-right: 15px;">✔</span>
+                            空き日時の確認（カレンダー表示）
+                        </li>
+                        <li style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <span style="color: #009688; margin-right: 15px;">✔</span>
+                            メニュー選択（所要時間つき）
+                        </li>
+                        <li style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <span style="color: #009688; margin-right: 15px;">✔</span>
+                            簡単な問診入力（当日の施術がスムーズになります）
+                        </li>
+                        <li style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <span style="color: #009688; margin-right: 15px;">✔</span>
+                            予約確定後、確認メールの自動送信
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr; gap: 40px;">
+                    <!-- Policy Section -->
+                    <div class="mr-reservation-section" style="margin-bottom: 0;">
+                        <h2 class="mr-title" style="font-size: 1.6rem; margin-bottom: 20px;">キャンセル・変更について</h2>
+                        <div style="font-size: 0.95rem; line-height: 1.8;">
+                            <p style="margin-bottom: 15px;">
+                                予約の変更・キャンセルは <strong style="color: #c0392b;">前日までにご連絡ください。</strong><br>
+                                当日キャンセル・無断キャンセルはキャンセル扱いとなります。
+                            </p>
+                            <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+                            <p>
+                                ※継続サポート価格は、前回の施術が予定通り実施された場合に適用されます。<br>
+                                当日・無断キャンセルがあった場合、次回は通常価格となります。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Section -->
+                    <div class="mr-reservation-section" style="margin-bottom: 0;">
+                        <h2 class="mr-title" style="font-size: 1.6rem; margin-bottom: 20px;">よくある質問（予約まわり）</h2>
+
+                        <div class="mr-faq-item">
+                            <div class="mr-faq-question">Q. どのメニューを選べばいいかわかりません。</div>
+                            <div class="mr-faq-answer">
+                                A. 迷った場合は、まず【初回体験】をご利用ください。状態を評価し、必要なサポートだけをご提案します。
+                            </div>
+                        </div>
+
+                        <div class="mr-faq-item">
+                            <div class="mr-faq-question">Q. 予約後に相談したいことが出てきました。</div>
+                            <div class="mr-faq-answer">
+                                A. LINEまたはメールでお気軽にご連絡ください（予約確認メールへの返信でもOKです）。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
