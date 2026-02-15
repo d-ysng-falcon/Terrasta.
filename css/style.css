@@ -584,3 +584,18 @@ footer p {
   box-shadow: 0 6px 20px rgba(0, 158, 253, 0.4);
   color: white;
 }
+
+/* Popi Button Style */
+.btn-popi {
+  background-color: var(--color-popi-orange);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+}
+
+.btn-popi:hover {
+  background-color: #e67e22;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
+  color: white;
+}
